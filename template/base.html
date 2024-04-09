@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Bungee+Spice&family=Madimi+One&family=Nabla&family=Ojuju:wght@200..800&family=Protest+Riot&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Satisfy&family=Sevillana&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Protest+Riot&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Sevillana&display=swap" rel="stylesheet">
 
 
     {% block linkcss %}
@@ -31,45 +32,50 @@
     <style>
         
     
-        html {
+        /* html {
             overflow-x: hidden;
-        }
+        } */
 
-        .header {
-            display: flex;
-            justify-content: center;
-            place-content: center;
-            align-items: center;
-            column-gap: 5vw;
-            background-color: rgb(22, 33, 62);
+        header {
             color: white;
-            font-size: 1.8rem;
-            margin-top: -1rem;
-            margin-left: -.5rem;
-            /* margin-bottom: 12rem; */
-            /* position: fixed; */
-            width: 100vw;
-            border-bottom-left-radius: 7rem;
-            border-bottom-right-radius: 7rem;
-            font-family: cursive;
-        }
-
-        .header img {
-            height: 10rem;
-        }
-
-        .header {
+            background-color: rgb(22, 33, 62);
+            text-align: center;
+            padding-top: 2.5%;
+            padding-bottom: 2%;
+            margin-left: -1%;
+            margin-top: -1.5%;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+            /* box-shadow: 2px 2px 5px black; */
+            box-shadow: 2px 2px 15px black;
             display: flex;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
             place-content: center;
             place-items: center;
-            /* margin-bottom: ; */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 1rem;
+            padding-bottom: 0rem;
         }
 
-        .header img {
-            /* height: 10rem; */
-            margin-top: 2rem;
+        header img {
+            height: 10vw;
+        }
+
+        header:hover {
+            cursor: -webkit-grabbing;
+        }
+
+
+        header h1 {
+            font-family: "Protest Riot", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin-top: -.5rem;
         }
 
         .navbar {
@@ -153,14 +159,13 @@
 
 <body>
 
-    <div class="header">
-        <!-- <img src="{% static 'logo1.png' %}" alt=""> -->
-        <!-- <img src="{% static 'logo2.png' %}" alt=""> -->
-        <img src="{% static 'images/logo3.png' %}" alt="">
-        <h1>
-            {% block heading %} {% endblock %}
-        </h1>
-    </div>
+    <header>
+
+        <a href="home">
+            <img src="{% static 'images/logo3.png' %}" alt="">
+        </a>
+        <h1>{% block heading %} {% endblock %}</h1>
+    </header>
 
     <center>
         <div class="navbar">
