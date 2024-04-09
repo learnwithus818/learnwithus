@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/profile_page.css' %}">
+    <!-- <link rel="stylesheet" href="../static/css/profile_page.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/logo3.png' %}" alt="">
+        <h2 class="heading">LearnWithUs</h2>
+
+    </div>
+    <div class="nav">
+        <ul class="nav_list">
+            <li1 class="navv_list_items"><a href="home">Home</a></li1>
+            <li2 class="navv_list_items"><a href="opportunities">Opportunities</a></li2>
+            <li3 class="navv_list_items"><a href="$">Books</a></li3>
+            <li4 class="navv_list_items"><a href="notespedia">NotesPedia</a></li4>
+            <li5 class="navv_list_items"><a href="techblog">Techblogs</a></li5>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="profile_main">
+                <img src="{% static 'images/profile_photo.webp' %}" alt="" class="profile_photo" id="dp">
+                <div class="profile_right">
+                    <p class="name" ><b>{{user_name}}</b></p>
+                    <p class="rank"><b>Rank : {{rank}}</b></p>
+                </div>
+
+            </div>
+            <div class="edit_profile">
+                <button class="edit_profile_button"><a href="#" class="edit_profile_text">Edit Profile</a></button>
+            </div>
+            <!-- <div style="width: 24rem; height: 0.2rem; background-color: #16213E; position: relative;top:-0.5rem; left: 1.5rem;"></div> -->
+            <div class="horizontal_line"></div>
+            <div class="community_stats">
+                <h2 class="community_heading">Community Stats :</h2>
+                <div class="community_container">
+                    <ul class="community_items">
+                        <img src="{% static 'images/profile_doubts.png'%}" alt="" class="community_logo">
+                        <p class="community_texts">Doubts :</p>
+                    </ul>
+                    <ul class="community_items">
+                        <img src="{% static 'images/profile_solutions.png'%}" alt="" class="community_logo">
+                        <p class="community_texts">Solutions</p>
+                    </ul>
+                    <ul class="community_items">
+                        <img src="{% static 'images/profile_discussions.png'%}" alt="" class="community_logo">
+                        <p class="community_texts">Discussions</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="horizontal_line"></div>
+            <div class="skills_section">
+                <h2 class="skills_heading">Skills :</h2>
+                <div class="skills_container">
+                    <ul class="skills_items">
+                        <img src="{% static 'images/skills_python.png'%}" alt="" class="skills_logo">
+                        <p class="skills_text">{{skill_2}}</p>
+                    </ul>
+                    <ul class="skills_items">
+                        <img src="{%static 'images/skills_c++.png'%}" alt="" class="skills_logo">
+                        <p class="skills_text">{{skill_1}}</p>
+                    </ul>
+                    <ul class="skills_items">
+                        <img src="{% static 'images/skills_database.png'%}" alt="" class="skills_logo">
+                        <p class="skills_text">{{skill_3}}</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="horizontal_line"></div>
+            <div class="recent_activity_section">
+                <h2 class="recent_activity_heading">Recent Activity :</h2>
+                <ul class="recent_activity_items">{{activity_1}}</ul>
+                <ul class="recent_activity_items">{{activity_2}}</ul>
+                <ul class="recent_activity_items">{{activity_3}}</ul>
+                <p><a href="#" class="recent_activity_show_more">Show more..</a></p>
+            </div>
+    </form>
+        </div>
+        <div class="right">
+            <div class="profile_other_container">
+                <section>
+                <h2 class="about_profile_heading">About Profile</h2>
+                <section class="about_profile">
+
+                    <ul class="about_profile_items"><b>Username</b> : {{user_name}}</ul>
+                    <div class="horizontal_line"></div>
+                    <ul class="about_profile_items"><b>Country</b> : {{country}}</ul>
+                    <div class="horizontal_line"></div>
+                    <ul class="about_profile_items"><b>Gender</b> : {{gender}}</ul>
+                    <div class="horizontal_line"></div>
+                    <ul class="about_profile_items"><b>LinkedIn</b> : {{linkedin}}</ul>
+                    <div class="horizontal_line"></div>
+                    <ul class="about_profile_items"><b>Activity Points</b> : {{activity_points}}</ul>
+                </section></section>
+                <section>
+                    <h2 class="activity_points_heading">Activity Points</h2>
+                    <section class="activity_points">
+
+                    </section>
+                </section>
+
+            </div>
+            <div class="activity_map">
+                <h2 class="activity_map_heading">Activity Map</h2>
+                <div class="activity_map_graph"></div>
+            </div>
+
+            <div class="subscribed_coursework">
+                <h2 class="subscribed_coursework_heading">Subscribed Coursework</h2>
+                <div class="subscribed_coursework_container">
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_ml.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">Machine Learing</p>
+
+                    </ul>
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_sql.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">SQL</p>
+                    </ul>
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_dm.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">Discrete Mathematics</p>
+                    </ul>
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_wd.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">Web Development</p>
+                    </ul>
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_aritificial_intelligence.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">Artificial Intelligence</p>
+                    </ul>
+                    <ul class="subscribed_coursework_items">
+                        <img src="{%static 'images/subscribed_coursework_arduino.webp'%}" alt="" class="subscribed_coursework_logo">
+                        <p class="subscribed_coursework_names">Arduino</p>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
