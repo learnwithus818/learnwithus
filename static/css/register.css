@@ -1,0 +1,89 @@
+html{
+    background-color: rgb(63, 147, 222);
+}
+a{
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
+html{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    place-content: center;
+    /* height: 100vh; */
+}
+
+form{
+    line-height: 1;
+    border: 0px solid white;
+    border-radius: 2rem;
+    background-color: rgb(46, 153, 248);
+    box-shadow: 2px 2px 30px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+}
+
+.login-form{
+    line-height: 3;
+    padding-top: 2rem;
+}
+
+.login-form input{
+    /* color: black; */
+    height: 1.5rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    background-color: rgb(255, 255, 255);
+    padding-left: .5rem;
+}
+
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.login-button input{
+    font-size: 1rem;
+    padding: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: .5rem;
+    height: 2.2rem;
+    background-color: white;
+    box-shadow: 2px 2px 30px rgb(255, 255, 255);
+
+}
+
+.login-redirect a{
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 2px 2px 30px white;
+    border-radius: .5rem;
+    color: black;
+}
+
+
+.login-redirect{
+    margin-top: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}

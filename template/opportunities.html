@@ -1,0 +1,598 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities | LearnWithUs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&family=Protest+Riot&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Sevillana&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/opportunities.css' %}">
+    <!-- <link rel="icon" href="images/icon.png"> -->
+
+
+     <style>
+    
+        header {
+            color: white;
+            background-color: rgb(22, 33, 62);
+            text-align: center;
+            padding-top: 2.5%;
+            padding-bottom: 2%;
+            margin-left: -1%;
+            margin-top: -1.5%;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+            /* box-shadow: 2px 2px 5px black; */
+            box-shadow: 2px 2px 15px black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            place-content: center;
+            place-items: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+        }
+
+        header img {
+            height: 10vw;
+        }
+
+        header:hover {
+            cursor: -webkit-grabbing;
+        }
+
+
+        header h1 {
+            font-family: "Protest Riot", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin-top: -.5rem;
+        }
+
+        /* section{ */
+        /* width: 102vw; */
+        /* margin-left: -1vw; */
+        /* } */
+
+        section h2 {
+            color: white;
+            background-color: rgb(22, 33, 62);
+            font-family: "Protest Riot", sans-serif;
+            font-weight: 300;
+            padding-left: 2%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            /* font-weight: 250; */
+            border-bottom: 2px solid black;
+            border-radius: 3rem;
+            /* border-bottom-right-radius: 3rem; */
+            /* border-bottom-left-radius: 3rem; */
+        }
+
+
+
+
+        /* Internship Section */
+
+        .all-interships {
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            column-gap: 2%;
+            /* height: 20rem; */
+            overflow-y: scroll;
+            padding-left: 1.5rem;
+        }
+
+
+        .internship-detail {
+            border: 1px solid black;
+            border-radius: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            place-items: center;
+            /* background-color: antiquewhite; */
+            width: 30rem;
+            padding-left: 2%;
+            padding-right: 2%;
+
+        }
+
+        .all-interships::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .internship-detail h3 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .internship-detail img {
+            margin-top: .6vw;
+            margin-bottom: .6vw;
+            width: 30vw;
+            box-shadow: 2px 2px 5px rgb(172, 222, 238);
+        }
+
+        .internship-detail img:hover {
+            box-shadow: 3px 3px 10px rgb(22, 33, 62);
+            width: 31vw;
+            /* padding-top: 0; */
+            margin-top: 0;
+            margin-bottom: 0;
+            transition: 80ms ease-in-out;
+            cursor: grab;
+
+        }
+
+        .internship-detail p {
+            width: 35vw;
+            text-align: center;
+        }
+
+        .heading-data {
+            position: sticky;
+            top: 1%;
+        }
+
+
+        @media (min-width:1350px) {
+            .internship-detail img {
+                width: 20vw;
+            }
+
+            .internship-detail img:hover {
+                width: 22vw;
+            }
+
+            .internship-detail p {
+                width: 25vw;
+                text-align: center;
+            }
+        }
+
+        @media (max-width:600px) {
+            header span {
+                display: none;
+            }
+
+            .internship-detail {
+                width: 20rem;
+
+            }
+
+            .internship-detail img {
+                width: 17rem;
+            }
+
+            .internship-detail p {
+                width: 16rem;
+            }
+
+            .all-interships {
+                column-gap: 1.5rem;
+            }
+
+            section h2 {
+                /* padding: 0; */
+                padding-left: 1.5rem;
+            }
+
+            .heading-data {
+                width: 99%;
+            }
+
+            header {
+                width: 99%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Footer */
+
+        footer p {
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgb(22, 33, 62);
+            padding-top: 1%;
+            padding-bottom: 1%;
+            border-radius: 1rem;
+
+            /* position: absolute; */
+            /* bottom: 1rem; */
+        }
+
+        .bhome {
+            /* rotate: 270deg; */
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+
+        }
+
+        .navbar {
+            width: 85vw;
+            border-radius: 2rem;
+        }
+
+
+        .navbar {
+            /* padding-top: 11VW; */
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: .5rem;
+            justify-content: space-around;
+            /* place-content: center; */
+            /* align-items: center; */
+            border: 0px solid black;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 1px 1px 10px rgb(22, 33, 62);
+            border-radius: 1rem;
+        }
+
+        .navbar div {
+            background-color: rgb(22, 33, 62);
+            color: white;
+            padding: .5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 1rem;
+            font-weight: 600;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style> 
+
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="home">
+            <img src="{% static 'images/logo3.png' %}" alt="">
+        </a>
+        <h1>Opportunities <span>@ LearnWithUs</span></h1>
+    </header>
+
+
+    <center>
+        <div class="navbar">
+            <div><a href="home">Home</a></div>
+            <div><a href="courses">Courses</a></div>
+            <div><a href="opportunities">Opportunities</a></div>
+            <div>NotesPedia</div>
+            <div>Books</div>
+            <div><a href="techblog">Techblogs</a></div>
+
+        </div>
+    </center>
+
+
+
+
+    <br><br>
+
+
+    <main>
+
+        <!-- Internship Section -->
+        <section>
+            <div class="heading-data">
+                <h2>Internships</h2>
+            </div>
+
+            <div class="all-interships">
+
+                <div class="internship-detail">
+                    <h3>Intern- Machine Learning (Gen AI)</h3>
+                    <img src="{% static 'oppimages/MLSeagate.png' %}" alt="">
+                    <p>
+                        Our organization specializes in Global Data Analytics and provides comprehensive solutions for
+                        Big data, Generative-AI, and MLOps frameworks and deployments. <a
+                            href="https://seagatecareers.com/job/Pune-Intern-Machine-Learning-%28Gen-AI%29/1126888400/?feedId=325900&utm_source=Indeed&utm_campaign=Seagate_Indeed"
+                            target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+                
+
+                <div class="internship-detail">
+                    <h3>CodeHers 2024 by Walmart Global Tech India</h3>
+                    <img src="{% static 'oppimages/codehers.jpg' %}" alt="">
+                    <p>
+                        CodeHers 2024 is open to female students across all engineering colleges in India who are
+                        pursuing their studies in ECE, EE, EEE, IT, CS. <a
+                            href="https://unstop.com/o/nw35Y0j?lb=U0LFWXD&utm_medium=Share&utm_source=shortUrl"
+                            target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+
+
+                <div class="internship-detail">
+                    <h3>Flipkart Runway: Season 4</h3>
+                    <img src="{% static 'oppimages/flipkartRunway.png' %}" alt="">
+                    <p>
+                        Introducing Season 4 of Flipkart Runway, an Early Career Program for Women Engineers, designed
+                        exclusively to offer them a fast-tracked journey toward a thriving career in technology. <a
+                            href="https://unstop.com/competitions/flipkart-runway-season-4-flipkart-901610?ref=HMFTRD"
+                            target="_blank">Learn
+                            More</a>
+
+                    </p>
+                </div>
+
+                <div class="internship-detail">
+                    <h3>Summer Research Interniship Program 2024</h3>
+                    <img src="{% static 'oppimages/srip.png' %}" alt="">
+                    <p>
+                        Students pursuing a bachelor’s or master’s degree are eligible to apply for this with a duration
+                        period of 8 weeks. <a href="https://srip.iitgn.ac.in/info/" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+
+                <div class="internship-detail">
+                    <h3>LinkedIn CoachIn Program 2024</h3>
+                    <img src="{% static 'oppimages/LinkedIn-coachin.png' %}" alt="">
+                    <p>
+                        🚀 Unlock Your Potential with LinkedIn’s CoachIn Program 2024: Empowering Women in Tech. <a
+                            href="https://linkedincoachinprogram-season5.splashthat.com/" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>
+
+        <br>
+        <br>
+
+        <!-- Hackathons and Competition Section -->
+        <section>
+            <div class="heading-data">
+                <h2>Hackathons/Competitions</h2>
+            </div>
+
+            <div class="all-interships">
+
+
+                <div class="internship-detail">
+                    <h3>Web Hackthon @ LearnWithUs</h3>
+                    <img src="{% static 'oppimages/hackathonlearnwithus.png' %}" alt="">
+                    <p>
+                        LearnWithUs is organising a Web development Hackthon for various college students. Every 1st year and 2nd year students are eligible to participate in this. Participate and win many <b>Cash Prizes</b> <a
+                            href="hackathon">Register Now</a>
+
+                    </p>
+                </div>
+
+
+                <div class="internship-detail">
+                    <h3>GenAI Hackathon APAC Edition</h3>
+                    <img src="{% static 'oppimages/genai.png' %}" alt="">
+                    <p>
+                        The GenAI Hackathon is your chance to revolutionise AI solutions. Let your imagination soar as
+                        you reshape industries, and solve critical problems with the power of AI. <a
+                            href="https://hack2skill.com/genai_hackathon_apac_edition#">Learn More</a>
+
+                    </p>
+                </div>
+
+
+                <div class="internship-detail">
+                    <h3>NationBuilding Case Study Competition</h3>
+                    <img src="{% static 'oppimages/nationBuilding.png' %}" alt="">
+                    <p>
+                        NationBuilding, is an annual event designed to engage the youth in the nation-building process
+                        by working on some of the most pressing issues facing India. Participants will dive into a
+                        2-month extravaganza across multiple online and offline rounds. <a
+                            href="https://unstop.com/competitions/nationbuilding-case-study-competition-nation-with-namo-882518?ref=HMFTRD">Learn
+                            More</a>
+
+                    </p>
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+        <br>
+        <br>
+
+        <!-- Scholarships Section -->
+        <section>
+            <div class="heading-data">
+                <h2>Scholarships</h2>
+            </div>
+            <div class="all-interships">
+
+                <div class="internship-detail">
+                    <h3>Reliance undergraduate Scholarship</h3>
+                    <img src="{% static 'oppimages/reliance.webp' %}" alt="">
+                    <p>
+                        Reliance Foundation is an Indian non-profit organisation which was founded in 2010 by Mukesh
+                        Ambani. Provides scholarship all engineering colleges in India who are pursuing their studies in
+                        ECE, EE, EEE, IT, CS. <a href="">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>Siemens Scholarship Program</h3>
+                    <img src="{% static 'oppimages/seimens.jpg' %}" alt="">
+                    <p>
+                        Siemens Scholarship Program is a scholarship program conducted by Siemens India. The program
+                        offers financial support and employment opportunities to students pursuing a first-year
+                        engineering degree at government colleges. <a href="">Learn
+                            More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>ONGC Scholarship</h3>
+                    <img src="{% static 'oppimages/ongc.png' %}" alt="">
+                    <p>
+                        ONGC, as the nation’s pioneer Oil and Gas Company, has been making gigantic impact in India’s
+                        economy and society. Its contribution towards inclusive and sustainable growth has made a
+                        difference to the lives of many. <a href="">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>FAEA Scholarship</h3>
+                    <img src="{% static 'oppimages/faea.png' %}" alt="">
+                    <p>
+                        FAEA invites application for scholarships for the year 2023-24 to pursue undergraduate studies
+                        in arts/commerce/science/medical/engineering and other technical and professional disciplines at
+                        any university/institution/college in India. <a href="">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>HDFC Bank Parivartan's ECSS Programme 2023-24</h3>
+                    <img src="{% static 'oppimages/hdfc-parivartan.png' %}" alt="">
+                    <p>
+                        HDFC Bank Parivartan's ECSS Programme aims to support meritorious and needy students belonging
+                        to underprivileged sections of society. <a href="">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>Kotak Kanya Scholarship 2023</h3>
+                    <img src="{% static 'oppimages/Kotak-Bank.jpg' %}" alt="">
+                    <p>
+                        Kotak Kanya Scholarship programme provides financial assistance to meritorious girl students
+                        from underserved communities from all across India to complete their higher education. <a
+                            href="">Learn More</a>
+
+                    </p>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <br>
+        <br>
+
+        <!-- Job Opportunities Section-->
+        <section>
+            <div class="heading-data">
+                <h2>Job Opportunities</h2>
+            </div>
+            <div class="all-interships">
+
+                <div class="internship-detail">
+                    <h3>Node JS Developer</h3>
+                    <img src="{% static 'oppimages/tcs.png' %}" alt="">
+                    <p>
+                        TCS presents an excellent opportunity for Node JS Developer. Experience (Yrs) : 10+ years.
+                        Location: Hyderabad, Bangalore, Kochi, Gurgaon, Noida, Bhubaneswar. <a
+                            href="https://www.linkedin.com/jobs/view/3821139008" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>Generative AI Engineer</h3>
+                    <img src="{% static 'oppimages/aiesco.png' %}" alt="">
+                    <p>
+                        AISEO.ai is seeking a talented and experienced Generative AI Engineer to join our dynamic team.
+                        In this role, you will be responsible for developing and enhancing our generative AI tools. <a
+                            href="https://www.linkedin.com/jobs/view/3822122236" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>Data Engineer</h3>
+                    <img src="{% static 'oppimages/outsized.png' %}" alt="">
+                    <p>
+                        Your expertise will contribute to the development of robust data pipelines, ensuring the
+                        availability and accessibility of high-quality data. <a
+                            href="https://www.linkedin.com/jobs/view/3816309864" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+                <div class="internship-detail">
+                    <h3>Wordpress Developer</h3>
+                    <img src="{% static 'oppimages/spearmint.png' %}" alt="">
+                    <p>
+                        Spearmint is a software firm that actually operates on a global scale and is motivated by
+                        excellence. Since its inception, our company has seen a year-over-year expansion in terms of its
+                        revenue, profitability, clientele, and workforce. <a
+                            href="https://www.linkedin.com/jobs/view/3820479904" target="_blank">Learn More</a>
+
+                    </p>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+        <br>
+        <br><br>
+        <br>
+
+    </main>
+
+
+
+    <footer>
+        <p>The End Bhaii 💖 <br> Par abhi isme bhot kaam baaki hai </p>
+        <!-- <br> -->
+    </footer>
+
+</body>
+
+</html>

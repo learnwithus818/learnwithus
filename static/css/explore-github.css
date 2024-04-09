@@ -1,0 +1,52 @@
+html{
+    color: white;
+    background-color: black;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.github-logo{
+    filter: invert(100%);
+    margin-top: -1.2rem;
+    /* margin-left: 10%; */
+}
+
+.git-text{
+    /* text-align: center; */
+    margin-top: 2rem;
+    /* width: 80%; */
+}
+
+
+div{
+    justify-content: center;
+}
+
+video{
+    width: 90%;
+}
+
+.gitstep {
+    width: 90%;
+    border-radius: 1rem;
+}
+
+
+
+.btop{
+    position: fixed;
+    right: 1.75rem;
+    bottom: 1rem;
+    padding: .3rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 0;
+    border-radius: .2rem;
+    font-size: 1rem;
+}

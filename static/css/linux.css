@@ -1,0 +1,79 @@
+
+html{
+    color:rgb(255, 255, 255);
+    background-color: black;
+    
+    
+}
+
+.back{
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 99, 99);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    text-decoration: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: .25rem;
+}
+
+.header h1{
+    text-align: center;
+    font-size: 2.2rem;
+}
+.header{
+    background-color: rgba(128, 128, 128, 0.249);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: -1rem;
+    /* width: 98vw; */
+    /* margin-left: -1rem; */
+    overflow: hidden;
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    align-items: center;
+    place-items: center;
+}
+
+
+h2,h3{
+    color: rgb(110, 171, 255);
+}
+
+span{
+    color: rgb(99, 250, 167);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.github-section img{
+    width: 90vw;
+    padding-top: 1rem;
+}
+.github-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+
+}
+
+
+@media (max-width:600px) {
+    .header img,.header h1{
+        font-size: 1.5rem;
+        height: 3rem;
+    }
+    .header{
+        /* padding: 0; */
+        /* padding-top: .5rem; */
+        /* height: 6rem; */
+        /* flex-direction: column; */
+        /* row-gap: 0; */
+    }
+}

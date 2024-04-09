@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+<style>
+    .explore-head {
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        margin-left: 2rem;
+        width: fit-content;
+        padding: 0;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        /* padding-bottom: 1rem; */
+
+    }
+
+    .explore-head h1 {
+        color: rgb(22, 33, 62);
+        text-decoration: underline;
+        border-bottom: 4px solid rgb(22, 33, 62);
+        padding-left: 0;
+        margin-left: 1rem;
+        font-family: 'Alkatra';
+        padding-bottom: 0rem;
+    }
+
+    .allcourses {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        place-content: center;
+        row-gap: 10vw;
+        margin-bottom: 10vw;
+    }
+
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        place-content: center;
+        place-items: center;
+
+    }
+
+    .textdata {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-content: center;
+        align-items: center;
+    }
+
+    .course .images img {
+        height: 10rem;
+        transform: skew(-10deg);
+    }
+
+
+    .course .textdata p {
+        font-weight: 550;
+        width: 60%;
+        text-wrap: wrap;
+        /* text-align: center; */
+    }
+
+    .course a {
+        border: 1px solid gray;
+        background-color: rgb(22, 33, 62);
+        color: white;
+        padding: .5rem;
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+        border-radius: 1rem;
+    }
+</style>
+{% endblock %}
+
+
+{% block title %}
+Courses | LearnWithUs
+{% endblock %}
+
+{% block heading %}
+Courses @ LearnWithUs
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="explore-head">
+    <h1>Start exploring our own courses curated just for you !</h1>
+</div>
+
+<div class="allcourses">
+
+    <div class="course">
+        <div class="images">
+            <img style="transform: skew(0deg);" src="{% static 'courses/linux.png' %}" alt="">
+        </div>
+        <div class="textdata">
+            <p>Kali Linux is a Debian-based distribution focused on penetration testing and digital forensics. It
+                includes a suite of tools for security testing, ethical hacking, and network analysis, widely used by
+                cybersecurity professionals and enthusiasts.
+                <br>Click below to start learning Linux now !
+            </p>
+            <a href="linux">Learn Linux</a>
+        </div>
+
+    </div>
+
+
+    <div class="course">
+        <div class="textdata">
+            <p>Python is among one of the best programming languages in the world. Python have a lot application in
+                various domains including Web development, Machine Learning, Neural Networks, Deep Learning etc...
+                <br>Click below to start learning Python now !
+            </p>
+            <a href="python">Learn Python</a>
+        </div>
+        <div class="images">
+            <img src="{% static 'courses/3dPython.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="course">
+        <div class="images">
+            <img src="{% static 'courses/c.png' %}" alt="">
+        </div>
+        <div class="textdata">
+            <p>C is a powerful, general-purpose programming language known for its efficiency and versatility. It's
+                widely used for system programming, developing operating systems, software applications, and embedded
+                systems. C offers low-level access to memory and hardware, making it suitable for performance-critical
+                tasks.
+                <br>Click below to start learning C now !
+            </p>
+            <a href="">Learn C Lang</a>
+        </div>
+
+    </div>
+
+
+    <div class="course">
+        <div class="textdata">
+            <p>HTML (Hypertext Markup Language) is the standard language for creating web pages and applications. It
+                provides the structure and content of a webpage through a system of tags, enabling browsers to interpret
+                and
+                display information to users.
+                <br>Click below to start learning HTML now !
+            </p>
+            <a href="">Learn HTML</a>
+        </div>
+        <div class="images">
+            <img src="{% static 'courses/htmlpng.png' %}" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="course">
+        <div class="images">
+            <img src="{% static 'courses/css.png' %}" alt="">
+        </div>
+        <div class="textdata">
+            <p>CSS (Cascading Style Sheets) is a styling language used to describe the presentation of HTML elements on
+                webpages. It controls the layout, colors, fonts, and other visual aspects of a webpage, enhancing its
+                appearance and user experience.
+                <br>Click below to start learning CSS now !
+            </p>
+            <a href="">Learn CSS</a>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+{% endblock %}
