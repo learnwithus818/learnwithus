@@ -1,0 +1,81 @@
+.header {
+    color: rgb(22, 33, 62);
+    text-align: center;
+    padding: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    font-size: 1.5rem;
+}
+
+.hackathon-text {
+    text-align: center;
+    color: white;
+    background-color: rgb(22, 33, 62);
+    padding: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+
+
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-div form {
+    border: 2px solid rgb(22, 33, 62);
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    /* width: 75%; */
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.form-div form input {
+    margin-top: 1rem;
+    height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(22, 33, 62);
+    color: rgb(22, 33, 62);
+    outline: none;
+    font-weight: 600;
+}
+
+.submit {
+    background-color: rgb(22, 33, 62);
+    color: white;
+}
+
+.bhome {
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(22, 33, 62);
+    border-radius: 1rem;
+    padding: .6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.bhome a {
+    color: inherit;
+    text-decoration: none;
+
+}

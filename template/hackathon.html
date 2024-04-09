@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon X LearnWithUs</title>
+    <link rel="stylesheet" href="{% static 'css/hackathon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hackathon.css' %}">
+
+     <style>
+        .header {
+            color: rgb(22, 33, 62);
+            text-align: center;
+            padding: 1rem;
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            font-size: 1.5rem;
+        }
+
+        .hackathon-text {
+            text-align: center;
+            color: white;
+            background-color: rgb(22, 33, 62);
+            padding: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+
+
+
+        .form-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .form-div form {
+            border: 2px solid rgb(22, 33, 62);
+            display: flex;
+            /* grid-template-columns: 1fr; */
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 1rem;
+            /* width: 75%; */
+            justify-content: center;
+            align-items: center;
+            place-content: center;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .form-div form input {
+            margin-top: 1rem;
+            height: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgb(22, 33, 62);
+            color: rgb(22, 33, 62);
+            outline: none;
+            font-weight: 600;
+        }
+
+        .submit {
+            background-color: rgb(22, 33, 62);
+            color: white;
+        }
+
+        .bhome {
+            position: fixed;
+            bottom: .5rem;
+            right: 1rem;
+            border: 2px solid white;
+            color: white;
+            background-color: rgb(22, 33, 62);
+            border-radius: 1rem;
+            padding: .6rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+        }
+
+        .bhome a {
+            color: inherit;
+            text-decoration: none;
+
+        }
+    </style>  
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>LearnWithUs</h1>
+    </div>
+    <div class="hackathon-text">
+        <h1>Online Registration for Hackathon @ LearnWithUs</h1>
+    </div>
+
+    <div class="form-div">
+
+        <p style="color: red;">
+            {{error}}
+        </p>
+
+        <form action="hackathon" method="POST">
+
+            {% csrf_token %}
+
+            <!-- <input type="hidden" name="access_key" value="05372b54-930b-4bb7-9a8b-6f5290e9d83e"> -->
+            <input name="team" type="text" placeholder="Your team name">
+            <input name="college" type="text" placeholder="Your college name">
+            <input name="lead" type="text" placeholder="Lead Name">
+            <input name="leadmobile" type="number" placeholder="Lead Phone number">
+            <input name="leadmail" type="email" placeholder="Lead Email Address">
+            <input name="mem2" type="text" placeholder="Member 2 name">
+            <input name="m2mobile" type="number" placeholder="Member 2 Phone number">
+            <input name="mem3" type="text" placeholder="Member 3 name">
+            <input name="m3mobile" type="number" placeholder="Member 3 Phone number">
+            <input name="year" type="text" placeholder="Your current year">
+            <input name="branch" type="text" placeholder="Your branch">
+
+            <input style="color: white;" class="submit" type="submit" value="Submit Now">
+
+        </form>
+
+    </div>
+    <div class="bhome">
+        <a href="home">Home</a>
+    </div>
+
+
+</body>
+
+</html>

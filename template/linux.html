@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Documentation</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7794178181441181"
+     crossorigin="anonymous"></script>
+     <link rel="icon" href="{% static 'images/linux-logo.png' %}">
+     <link rel="stylesheet" href="{% static 'css/linux.css' %}">
+
+     <style>
+        html{
+            background-image: url("{% static 'images/bg.jpg' %}");
+        }
+     </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <h1>Linux & Networking</h1>
+        </div>
+        <div>
+            <img src="{% static 'images/linux-logo.png' %}" alt="">
+        </div>
+    </div>
+
+    <h3>Basic Command :-</h3>
+    <ul>
+        <li><span>PWD :</span>Gives us the current working directory.</li>
+        <li><span>cd :</span> <br> <span>cd foldeer-name :</span> Navigate us to that folder <br> <span>cd .. :</span>
+            Navigate us to the previous
+            folder. </li>
+        <li><span>ls :</span> Gives us the list of all files and folder present in that directory.</li>
+        <li><span>touch :</span> touch file-name : Make a file with the name provided.</li>
+        <li><span>cat :</span>Shows us the content of the file.</li>
+        <li><span>echo :</span> In order to put some content to the file we can use this command. <br> <span>Syntax :
+            </span>echo
+            _content-to-be-inserted_ > file-name</li>
+        <li><span>nano :</span> We can use nano to insert or modify our file using a GUI rather than command line. <br>
+            <span>Syntax :</span> nano file-name
+        </li>
+        <li><span>mkdir :</span>In order to create a new folder we can use this command. <br> <span>Syntax :
+            </span>mkdir
+            folder-name</li>
+        <li><span>mv :</span> To move our file to another folder. <br><span>Syntax :</span>mv file-name
+            destination-folder-name</li>
+        <li><span>cp :</span>To make copy of a file. <br> <span>Syntax :</span>cp existing-file new-name-after-copying
+        </li>
+        <li><span>rm :</span>To remove a file we can use this command. <br><span>Syntax :</span>rm file-name <br> To
+            remove a folder
+            we must use <span>-r</span>after the folder name. <br> <span>rm * -r</span> Removes everything in that
+            directory.</li>
+        <li><span>clear :</span> Clears out the terminal screen.</li>
+
+    </ul>
+
+    <h3>Networking Commands :-</h3>
+    <ul>
+        <li>
+            <span>ifconfig : </span>
+            Gives us the information regarding our local IP address and our MAC address. <br>
+            <span>Syntax : </span>
+            ifconfig or sudo ifconfig
+            <br>
+            <span>sudo</span> is used to provide admin priviledge to the current account.
+        </li>
+
+    </ul>
+
+    <h2>Information Gathering tools :-</h2>
+    <!-- Here we will learn about how to gather the information from the websites -->
+    <h3>Basic Email gathering tool :-</h3>
+    <ul>
+
+        <li>
+            <span>ping :</span> It is used to get the ip address of a website. <br>
+            <span>Syntax :</span> ping website_address
+        </li>
+        <li>
+            <span>nslookup :</span> It is used to get the ip address of a website. <br>
+            <span>Syntax :</span> nslookup website_address
+        </li>
+        <li>
+            <span>whois : </span>It gives us a detailed information for a website rather than just ip including DNS ,
+            active
+            status, registration date, expiry date, contact number, email addresses, etc. <br>
+            <span>Syntax : </span>whois website-name
+        </li>
+        <li>
+            <span>whatweb :</span>It gives us a detailed information about the website including the IP address, emails,
+            technology stacks used along with the versions and a lot more. <br>
+            <span>
+                Syntax :
+            </span>
+            <ol>
+                <li>
+                    <span>whatweb website-address</span> <br>
+                </li>
+                <li>
+                    <span>whatweb website-address -v </span>
+                    It gives information in a more descriptive way.
+                </li>
+                <li>
+                    <span>
+                        whatweb website-address --aggression (1-4) -v
+                    </span>
+                    It gives information in a more descriptive way
+                    with aggression level ranging from 1 (stealthy) to 4 ( heavy ).
+                </li>
+                <li>
+                    <span>whatweb IP-range</span>
+                    It gives information about the website ranging from given IP to destination IP.
+                </li>
+                <li>
+                    <span>
+                        whatweb IP-range --no-errors
+                    </span>
+                    It gives information without showing up the errors.
+                </li>
+                <li>
+                    <span>
+                        whatweb IP-range --no-errors --log-verbose=file-name
+                    </span>
+                    It gives us the information and saves it to the file file-name.
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <h3>Gathering Emails using theHarvester :-</h3>
+    <ul>
+        <li>
+            <span>
+                theHarvester -d (domain-name) -b (name of the sources to search for e.g. google , linkedlin, or all) -l
+                (limit, default is 500)
+            </span><br>
+            It will take some time and then display the results to us.
+        </li>
+    </ul>
+    <h3>Gathering Emails using hunter.io :-</h3>
+    <ul>
+        <li>It is a website that can help us to find emails and usernames from a target website.</li>
+    </ul>
+
+
+
+    <!-- Using the github tools -->
+    <div>
+
+        <div>
+            <h3>Using tools from GITHUB :-</h3>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    First of all, find the tool you wanna use and then clone it using the command :
+                </li>
+                <li>
+                    <span> git clone <span style="font-style: italic;">link of the Github-Project</span> </span>
+                </li>
+                <li>
+                    Now read all the documentation of the website to use the tool as per our need. <br>
+                </li>
+                <li>
+                    Some of the example of the tool is Red_Hawk , sherlock (Used for finding the usernames) , etc.
+                </li>
+
+            </ul>
+        </div>
+
+        <div>
+
+            <details>
+
+                <summary>
+                    For better Understanding , example of a tool called sherlock is given here <b><i>Click to explore 👍 :-)</i></b>
+                </summary>
+
+                <div class="github-section">
+                    <img src="{% static 'images/github-link.png' %}" alt="">
+                    <img src="{% static 'images/github-clone.png' %}" alt="">
+                    <img src="{% static 'images/github-command.png' %}" alt="">
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <h2>Scanning Tools :-</h2>
+    Here we get much deeper information as in information gathering
+
+    <ol>
+        <li>
+            Focused more on technolgy
+        </li>
+        <li>
+            We are more likely to scan for some open ports and what version of the tech stack they are currently using
+        </li>
+        <li>
+            TCP(Transmission control protocol) and UDP(User datagram protocol)
+        </li>
+        <li>
+            Both are used for sending the data or the package
+        </li>
+        <li>
+            TCP is a three way handshake
+        </li>
+
+        <li>
+            In TCP first of all we synchronise with the server then we sent the request to the server then server sends
+            us the required package
+        </li>
+        <li>
+            These packages are numbered when they are sent from the server to the client and then checked for some
+            errors -> If any package is not sent by server or recieved by the client then it is resent by the server
+        </li>
+        <li>
+            On the other hand UDP is used for the same purpose but it is faster than TCP. It is used when there is no
+            error as it doesnot check for the errors -> Used for live streaming and gamings -> If any package is missing
+            then it can't be sent back
+        </li>
+    </ol>
+
+
+    <!-- Scanning the network -->
+    <h3>Scanning the network :</h3>
+    <p>First of all check how many open ports we have on our network</p>
+
+    <ul>
+
+        <li>
+            <p><span>arp command :</span> is used to display all the networks connected to our network.</p>
+        </li>
+        <li>
+            <p><span>Syntax : </span>arp -a</p>
+            <p>But for that we need to communicate with the device hence it is not much used</p>
+        </li>
+
+        <li>
+            <p><span>netdiscover :</span> It is better than arp, its list all the devices on our network without
+                communicating with them</p>
+
+        </li>
+
+        <li>
+            <p>To check details about our router we can use the command : <span>netstat -nr</span></p>
+
+        </li>
+
+
+        <li>
+            <p><span>nmap : </span>Is used to find the open port in the network.</p>
+
+        </li>
+        <!-- Nmap -->
+        <li>
+            <p><span>Syntax : </span> <span>nmap ip-address / website</span></p>
+        </li>
+
+    </ul>
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+    <footer>
+        <a href="courses" class="back">Back</a>
+    </footer>
+
+</body>
+
+</html>

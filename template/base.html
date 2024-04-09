@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Bungee+Spice&family=Madimi+One&family=Nabla&family=Ojuju:wght@200..800&family=Protest+Riot&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Satisfy&family=Sevillana&display=swap"
+        rel="stylesheet">
+
+
+    {% block linkcss %}
+    {% endblock %}
+    
+    {% block style %}
+    {% endblock %}
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+    <style>
+        
+    
+        html {
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            place-content: center;
+            align-items: center;
+            column-gap: 5vw;
+            background-color: rgb(22, 33, 62);
+            color: white;
+            font-size: 1.8rem;
+            margin-top: -1rem;
+            margin-left: -.5rem;
+            /* margin-bottom: 12rem; */
+            /* position: fixed; */
+            width: 100vw;
+            border-bottom-left-radius: 7rem;
+            border-bottom-right-radius: 7rem;
+            font-family: cursive;
+        }
+
+        .header img {
+            height: 10rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            place-content: center;
+            place-items: center;
+            /* margin-bottom: ; */
+        }
+
+        .header img {
+            /* height: 10rem; */
+            margin-top: 2rem;
+        }
+
+        .navbar {
+            /* padding-top: 11VW; */
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* place-content: center; */
+            /* align-items: center; */
+            border: 0px solid black;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 1px 1px 10px rgb(22, 33, 62);
+            border-radius: 1rem;
+        }
+
+        .navbar div {
+            background-color: rgb(22, 33, 62);
+            color: white;
+            padding: .5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 1rem;
+            font-weight: 600;
+        }
+
+
+        .navbar {
+            width: 85vw;
+            border-radius: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .twitter {
+            filter: invert(100%);
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            place-content: center;
+            align-items: center;
+            place-items: center;
+            border: 2px solid rgb(22, 33, 62);
+            background-color: rgb(22, 33, 62);
+            color: white;
+            row-gap: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            width: 100vw;
+        }
+
+        footer div a {
+            padding-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        footer div img {
+            height: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        footer{
+            position: relative;
+            bottom: 0;
+            margin-left: -.5rem;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <!-- <img src="{% static 'logo1.png' %}" alt=""> -->
+        <!-- <img src="{% static 'logo2.png' %}" alt=""> -->
+        <img src="{% static 'images/logo3.png' %}" alt="">
+        <h1>
+            {% block heading %} {% endblock %}
+        </h1>
+    </div>
+
+    <center>
+        <div class="navbar">
+            <div><a href="home">Home</a></div>
+            <div><a href="courses">Courses</a></div>
+            <div><a href="opportunities">Opportunities</a></div>
+            <div>NotesPedia</div>
+            <div>Books</div>
+            <div><a href="techblog">Techblogs</a></div>
+
+        </div>
+    </center>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    <footer>
+
+        <div>
+            <img src="{% static 'images/linkedin.png'  %}" alt="">
+            <img class="twitter" src="{% static 'images/twitter.png' %}" alt="">
+            <img src="{% static 'images/instagram.png' %}" alt="">
+            <img src="{% static 'images/facebook.png' %}" alt="">
+
+        </div>
+        <div>
+            <a href="">About</a>
+            <a href="copyright">Copyright</a>
+            <a href="">Terms and Condition</a>
+            <a href="contact">Contact Us</a>
+            <a href="">Team</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
