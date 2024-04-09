@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+<style>
+
+    .head h1 {
+        color: rgb(22, 33, 62);
+        text-decoration: underline;
+        /* border-bottom: 4px solid rgb(22, 33, 62); */
+        margin-top: 5vw;
+        padding-left: 2rem;
+        margin-left: 1.2rem;
+        font-family: 'Alkatra';
+        padding-bottom: 0rem;
+
+    }
+
+
+
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        place-content: center;
+        place-items: center;
+
+    }
+
+    .textdata {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-content: center;
+        align-items: center;
+    }
+
+    .intro .images img {
+        height: 10rem;
+        transform: skew(-10deg);
+    }
+
+
+    .intro .textdata p {
+        font-weight: 550;
+        width: 95%;
+        text-wrap: wrap;
+        /* text-align: center; */
+    }
+
+    section{
+    
+    font-family: cursive;
+    font-weight: 300;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 2px solid black;
+    border-radius: 1.2rem;
+    margin-left: 1.6%;
+    margin-bottom: 1.2%;
+    }
+    .intro p{
+        margin-right: 2rem;
+    }
+
+    .head-last{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: rgb(22, 33, 62);
+        text-decoration: underline;
+        /* border-bottom: 4px solid rgb(22, 33, 62); */
+        margin-top: 5vw;
+        padding-left: 2rem;
+        margin-left: 1.2rem;
+        font-family: 'Alkatra';
+        padding-bottom: 0rem;
+    }
+
+    .intro section{
+        margin-right: 2rem;
+        margin-top: 1rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+
+    }
+</style>
+{% endblock %}
+
+
+{% block title %}
+About | LearnWithUs
+{% endblock %}
+
+{% block heading %}
+About @ LearnWithUs
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="head">
+    <h1>About LearnWithUs</h1>
+</div>
+<section>
+    <div class="intro">
+        <p>LearnWithUs is an educational platform that is currently 
+            being developed to meet the need of the college students irrespective of 
+            their year. This web application will help the students to bridge the gap 
+            between their academics and their skill developments.
+        </p>
+        <div class="textdata">
+            <div class="images">
+                <img src="{% static 'aboutimages/what.jpg' %}" alt="">
+            </div>
+            <!-- <a href="linux">Learn Linux</a> -->
+        </div>
+
+    </div>
+</section>
+
+<div class="head">
+    <h1>What We Are</h1>
+</div>
+    <section>
+    <div class="intro">
+        <div class="textdata">
+        <div class="images">
+            <img src="{% static 'aboutimages/who.png' %}" alt="">
+        </div>
+    </div>
+            <p>Welcome to LearnWithUs, where innovation meets education!  
+                At LearnWithUs, we believe in the power of education to change lives. Our mission is to empower learners of all ages and backgrounds to reach their full potential through accessible, engaging, and personalized learning experiences. Behind every product and service we offer is a team of dedicated educators and learning specialists. 
+                
+            </p>
+            <!-- <a href="linux">Learn Linux</a> -->
+        
+
+    </div>
+</section>
+<div class="head">
+    <h1>Why We Are</h1>
+</div>
+<section>
+    <div class="intro">
+        <p>At LearnWithUs, we're passionate about transforming education and empowering learners.We believe in harnessing the power of technology to revolutionize education. Our team is dedicated to creating cutting-edge solutions that make learning more engaging, accessible, and effective.Our priority is the success and satisfaction of our learners. We strive to understand their unique needs and preferences to tailor our offerings accordingly, ensuring a personalized and rewarding learning experience for each individual.
+        </p>
+        <div class="textdata">
+        <div class="images">
+            <img src="{% static 'aboutimages/why.png' %}" alt="">
+        </div>
+            
+    </div>
+    </div>
+</section>
+<div class="head-last">
+    <h1>Key Features of LearnWithUs</h1>
+</div>
+<section>
+    <div class="intro">
+        <!-- <div class="features"> -->
+        <section>
+         <div class="textdata">
+        <div class="images">
+            <img src="{% static 'aboutimages/courses.webp' %}" alt="">
+            <h2><a href="courses">Explore Now</a></h2>
+        </div>
+        </div>
+            <p>Here we provide skill development courses 
+                in documentation form which they can refer for understanding the 
+                concepts.
+                <br>
+                Our Courses section includes Linux,HTML,Python,CSS and many other skill development cources
+            </p>
+        </section>
+        <section>
+            <div class="textdata">
+                <div class="images">
+                    <img src="{% static 'aboutimages/oppor.jpg' %}" alt="">
+                    <h2><a href="opportunities">Explore Now</a></h2>
+                </div>
+            </div>
+            <p>Here we provides internship opportunities, 
+                Scholarships details for 1st year college students ,Upcoming Hackathons Details, competitions and Job Opportunities to job seekers.
+                
+            </p>
+                </section>
+    <!-- </div> -->
+    <section>
+    <div class="textdata">
+        <div class="images">
+            <img src="{% static 'aboutimages/notes.jpeg' %}" alt="">
+            <h2><a href="notespedia">Explore Now</a></h2>
+        </div>
+        </div>
+            <p>NotesPedia provide the students with 
+                their own college notes irrespective of their college or domain. We 
+                will be providing the reference books also.Here we also provide study materials 
+                such as interview question, programming question, cheat sheet, 
+                roadmap etc.
+            </p> 
+        </section>
+        <section>
+            <div class="textdata">
+                <div class="images">
+                    <img src="{% static 'aboutimages/techblog.jpeg' %}" alt="">
+                    <h2><a href="techblog">Explore Now</a></h2>
+                </div>
+                </div>
+                    <p>Techblog section provide students with industry insights and 
+                        latest news trends. User will be able to upload their own blogs which 
+                        will be visible to all other users.
+                    </p>
+                </section>
+    <!-- </div> -->
+    </div>
+</section>
+
+
+    
+
+
+
+
+
+{% endblock %}

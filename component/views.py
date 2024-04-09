@@ -206,6 +206,14 @@ def python(request):
     return render(request,'python-course.html')
 
 
+def book(request):
+    return render(request,'book.html')
+
+
+def about(request):
+    return render(request,'about.html')
+
+
 def copyright(request):
     return render(request,'copyright.html')
 
