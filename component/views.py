@@ -18,7 +18,7 @@ db_config = {
 universal_username = None
 
 def login(request):
-    
+
     connection = psycopg2.connect(**db_config)
     # Create a cursor object to execute SQL queries
     cursor = connection.cursor()
@@ -31,7 +31,7 @@ def login(request):
         if len(username)==0 or len(password)==0:
             errormsg = {'error':'Username or password is empty !'}
             return render(request,'index.html',errormsg)
-        
+
         sql_query = "SELECT * FROM \"user\" where username = %s;"
         cursor.execute(sql_query,(username,))
 
@@ -40,25 +40,25 @@ def login(request):
 
         # command = 'select * from user where username = %s'
         # mycursor.execute(command,(username,))
-        
+
         res = rows
-        
+
         if len(res)!=0 and res[0][-1] == password:
             universal_username = username
-        
+
             # home(request)
             user_data = {
                 'username' : universal_username
             }
             return render(request,'home.html',user_data)
             # return redirect('home')
-        
+
         else:
             errormsg = {'error':'Username or password is incorrect !'}
             return render(request,'index.html',errormsg)
-    
+
         # return redirect('index')
-    
+
     else:
         return render(request,'index.html')
 
@@ -68,7 +68,7 @@ def register(request):
     # Create a cursor object to execute SQL queries
     cursor = connection.cursor()
 
-    if request.method == 'POST': 
+    if request.method == 'POST':
         name = request.POST['name']
         username = request.POST['username']
         email = request.POST['email']
@@ -80,25 +80,25 @@ def register(request):
                 'error':'Password does not match !'
             }
             return render(request,'register.html',err_msg)
-        
-        
+
+
         command = "INSERT INTO \"user\" (name, username, email, password) VALUES (%s, %s, %s, %s)"
         cursor.execute(command, (name, username, email, password1))
         connection.commit()
-        
+
         return redirect('home')
-    
+
     else:
         return render(request,'register.html')
-    
-    
+
+
 def home(request):
     login(request)
     # universal_username = getuser()
     user_data = {
         'username' : universal_username
     }
-    
+
 
     return render(request,'home.html',user_data)
 def techblog(request):
@@ -108,7 +108,7 @@ def techblog(request):
     username = 'fx818'
 
     sql_query = "SELECT content FROM \"blogs\";"
-    
+
     id_query = "select id from \"blogs\";"
     cursor.execute(id_query)
     id = cursor.fetchall()
@@ -134,7 +134,7 @@ def techblog(request):
 
         sql_query = "SELECT content FROM \"blogs\";"
         cursor.execute(sql_query)
-    
+
 
         rows = cursor.fetchall()
         result = rows[-1:-4:-1]
@@ -242,9 +242,38 @@ def contact(request):
 
         return render(request,'msg.html')
 
-    
+
     return render(request,'contact.html')
 
+def profile_page(request):
+    rank = 1
+    user_name = 'Yash Chaudhary'
+    skill_1 = 'C++'
+    skill_2 = 'Python'
+    skill_3 = 'Database'
+    activity_1 ='Operating System Notes'
+    activity_2 ='Software Engineering'
+    activity_3 ='Principles Of Programming Language'
+    gender= 'Male'
+    country = 'India'
+    linkedin = 'xyz@gmail.com'
+    activity_points = int(30210)
+    context = {'user_name':user_name,
+               'rank': rank,
+               'skill_1':skill_1,
+               'skill_2':skill_2,
+               'skill_3':skill_3,
+               'activity_1':activity_1,
+               'activity_2':activity_2,
+               'activity_3':activity_3,
+               'gender':gender,
+               'country':country,
+               'linkedin':linkedin,
+               'activity_points':activity_points
+               }
 
+    return render(request,'profile_page.html' ,context )
+def notespedia(request):
+    return render(request,'notespedia.html')
 # random
 

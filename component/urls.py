@@ -15,5 +15,7 @@ urlpatterns = [
     path('python',views.python,name = 'python'),
     path('copyright',views.copyright,name = 'copyright'),
     path('contact',views.contact,name = 'contact'),
-    path('msg',views.msg,name = 'msg')
+    path('msg',views.msg,name = 'msg'),
+    path("profile_page", views.profile_page, name="profile_page"),
+    path("notespedia",views.notespedia,name='notespedia')
 ]
