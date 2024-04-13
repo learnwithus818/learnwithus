@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+CSE Branch Notes | LearnWithUs
+{% endblock %}
+
+
+{% block heading %}
+CSE Notes @ LearnWithUs
+{% endblock %}
+
+
+{% block style %}
+<style>
+    .firstyear::-webkit-scrollbar , html::-webkit-scrollbar {
+        display: none;
+    }
+
+    .yearheading{
+        margin-left: 3vw;
+    }
+
+    .firstyear {
+        border: 1px solid rgb(22, 33, 62);
+        display: flex;
+        column-gap: 1rem;
+        overflow-x: scroll;
+        padding: 1rem;
+        margin: 1rem;
+        margin-left: 3vw;
+    }
+
+    .firstyear img {
+        height: 17.5vw;
+        box-shadow: 1px 1px 4px rgb(22, 33, 62);
+    }
+
+    @media (max-width:650px){
+        .firstyear img{
+            height: 25vw;
+        }
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- First Year Notes -->
+<h2 class="yearheading">First Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/chem.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/civil.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/ics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/ict.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/iet.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/maths.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/physics.png' %}" alt="">
+        </a>
+    </div>
+
+
+</div>
+
+
+<!-- Second Year notes -->
+<h2 class="yearheading">Second Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/co.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/de.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/dsuc.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/em.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/ict.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/maths.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/os.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/ppl.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/python.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/se.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'secondyearimg/webtech.png' %}" alt="">
+        </a>
+    </div>
+
+
+</div>
+
+
+<!-- Third Year Notes -->
+<h2 class="yearheading">Third Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/advDBMS.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/ai.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/automata.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/cn.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/comp-graphics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/compiler-design.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/cyber.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/daa.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/datawarehousing.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/dbms.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/ds.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/enterpreneur.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/imageprocessing.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/informal-storage.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/oops.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'thirdyearimg/soft-computing.png' %}" alt="">
+        </a>
+    </div>
+
+
+</div>
+
+
+<!-- Final year Notes -->
+<!-- <h2 class="yearheading">Final Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/chem.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/civil.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/ics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/ict.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/iet.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/maths.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/physics.png' %}" alt="">
+        </a>
+    </div>
+
+
+</div> -->
+
+<br><br><br>
+
+
+{% endblock %}

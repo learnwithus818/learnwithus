@@ -346,6 +346,10 @@ def notespedia(request):
     return render(request,'notespedia.html')
 
 
+def cse(request):
+    return render(request,'cse.html')
+
+
 def loginerror(request):
     return render(request,'loginerror.html')
 

@@ -21,5 +21,6 @@ urlpatterns = [
     path('loginerror',views.loginerror,name = 'loginerror'),
     path('logout',views.logout,name = 'logout'),
     path("profile_page", views.profile_page, name="profile_page"),
+    path("cse",views.cse,name='cse'),
     path("notespedia",views.notespedia,name='notespedia')
 ]

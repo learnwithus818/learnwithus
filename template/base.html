@@ -32,9 +32,9 @@
     <style>
         
     
-        /* html {
+        html {
             overflow-x: hidden;
-        } */
+        }
 
         header {
             color: white;
@@ -50,19 +50,20 @@
             box-shadow: 2px 2px 15px black;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             place-content: center;
             place-items: center;
+            column-gap: 5vw;
             width: 100%;
             margin: 0;
             padding: 0;
             padding-top: 1rem;
-            padding-bottom: 0rem;
+            padding-bottom: 1rem;
         }
 
         header img {
-            height: 10vw;
+            height: 7vw;
         }
 
         header:hover {
@@ -75,7 +76,7 @@
             font-weight: 400;
             font-style: normal;
             font-size: 2.5rem;
-            margin-top: -.5rem;
+            /* margin-top: -.5rem; */
         }
 
         .navbar {
@@ -87,6 +88,7 @@
             /* place-content: center; */
             /* align-items: center; */
             border: 0px solid black;
+            row-gap: 0.75rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
             box-shadow: 1px 1px 10px rgb(22, 33, 62);
@@ -161,10 +163,14 @@
 
     <header>
 
-        <a href="home">
-            <img src="{% static 'images/logo3.png' %}" alt="">
-        </a>
-        <h1>{% block heading %} {% endblock %}</h1>
+        <div>
+            <a href="home">
+                <img src="{% static 'images/logo4.png' %}" alt="">
+            </a>
+        </div>
+        <div>
+            <h1>{% block heading %} {% endblock %}</h1>
+        </div>
     </header>
 
     <center>
