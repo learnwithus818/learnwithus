@@ -23,7 +23,7 @@ Your Profile @ LearnWithUs
             <div class="profile_main">
                 <img src="{% static 'images/profile_photo.webp' %}" alt="" class="profile_photo" id="dp">
                 <div class="profile_right">
-                    <p class="name" ><b>{{user_name}}</b></p>
+                    <p class="name" ><b>{{username}}</b></p>
                     <p class="rank"><b>Rank : {{rank}}</b></p>
                 </div>
 
@@ -84,13 +84,13 @@ Your Profile @ LearnWithUs
                 <h2 class="about_profile_heading">About Profile</h2>
                 <section class="about_profile">
 
-                    <ul class="about_profile_items"><b>Username</b> : {{user_name}}</ul>
+                    <ul class="about_profile_items"><b>Username</b> : {{username}}</ul>
                     <div class="horizontal_line"></div>
                     <ul class="about_profile_items"><b>Country</b> : {{country}}</ul>
                     <div class="horizontal_line"></div>
                     <ul class="about_profile_items"><b>Gender</b> : {{gender}}</ul>
                     <div class="horizontal_line"></div>
-                    <ul class="about_profile_items"><b>LinkedIn</b> : {{linkedin}}</ul>
+                    <ul class="about_profile_items"><b>LinkedIn</b> : <a href="" target="_blank">{{linkedin}}</a></ul>
                     <div class="horizontal_line"></div>
                     <ul class="about_profile_items"><b>Activity Points</b> : {{activity_points}}</ul>
                 </section></section>
