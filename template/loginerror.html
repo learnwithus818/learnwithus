@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Login Error
+{% endblock %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/loginerror.css' %}">
+{% endblock %}
+
+
+{% block heading %}
+Login Error
+{% endblock %}
+
+{% block content %}
+
+<center>
+
+    <div class="container">
+        <p class="login-para">
+            You need to login first in order to access your profile page !
+        </p>
+
+        <p class="login-link">
+            <a href="login">Login Now</a>
+            <br> <br><br>
+            <a href="register">Create an Account</a>
+        </p>
+
+    </div>
+
+</center>
+
+
+{% endblock %}

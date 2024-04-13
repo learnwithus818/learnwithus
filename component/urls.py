@@ -18,6 +18,9 @@ urlpatterns = [
     path('book',views.book,name = 'book'),
     path('about',views.about,name = 'about'),
     path('msg',views.msg,name = 'msg'),
+    path('loginerror',views.loginerror,name = 'loginerror'),
+    path('logout',views.logout,name = 'logout'),
     path("profile_page", views.profile_page, name="profile_page"),
+    path("cse",views.cse,name='cse'),
     path("notespedia",views.notespedia,name='notespedia')
 ]

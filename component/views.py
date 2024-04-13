@@ -15,7 +15,32 @@ db_config = {
 
 
 
+# global universal_username
 universal_username = None
+data = ''
+
+# import attr 
+# @attr.s(frozen=True)
+# class ImmutableClass:
+#     universal_username = attr.ib()
+    
+# obj = ImmutableClass("Test Name")
+
+
+
+
+def logout(request):
+    global universal_username
+    universal_username = None
+    user_data = {
+        'username' : None
+    }
+
+    return render(request,'home.html',user_data)
+
+
+
+
 
 def login(request):
 
@@ -44,12 +69,16 @@ def login(request):
         res = rows
 
         if len(res)!=0 and res[0][-1] == password:
-            universal_username = username
+
+            global universal_username
+            universal_username = (username,)
+
 
             # home(request)
             user_data = {
-                'username' : universal_username
+                'username' : universal_username[0]
             }
+            data = username
             return render(request,'home.html',user_data)
             # return redirect('home')
 
@@ -64,8 +93,6 @@ def login(request):
 
 def register(request):
     connection = psycopg2.connect(**db_config)
-
-    # Create a cursor object to execute SQL queries
     cursor = connection.cursor()
 
     if request.method == 'POST':
@@ -93,14 +120,15 @@ def register(request):
 
 
 def home(request):
-    login(request)
-    # universal_username = getuser()
+    if universal_username is None:
+        return render(request,'home.html')
+    
     user_data = {
-        'username' : universal_username
+        'username' : universal_username[0]
     }
-
-
     return render(request,'home.html',user_data)
+
+
 def techblog(request):
     connection = psycopg2.connect(**db_config)
     cursor = connection.cursor()
@@ -121,8 +149,11 @@ def techblog(request):
     # result = rows[-1:-4:-1]
     result = rows
 
+    global universal_username
+
     value = {
-            'data':result
+            'data':result,
+            'username':universal_username
     }
 
     if request.method == 'POST':
@@ -139,8 +170,10 @@ def techblog(request):
         rows = cursor.fetchall()
         result = rows[-1:-4:-1]
 
+        
         value = {
-                'data':result
+                'data':result,
+                'username':universal_username
         }
 
         return render(request,'techblog.html',value)
@@ -182,8 +215,11 @@ def hackathon(request):
 
 
         return render(request,'msg.html')
-
-    return render(request,'hackathon.html')
+    global universal_username
+    user_data = {
+        'username' : universal_username[0]
+    }
+    return render(request,'hackathon.html',user_data)
 
 def opportunities(request):
     return render(request,'opportunities.html')
@@ -254,19 +290,43 @@ def contact(request):
     return render(request,'contact.html')
 
 def profile_page(request):
-    rank = 1
-    user_name = 'Yash Chaudhary'
-    skill_1 = 'C++'
-    skill_2 = 'Python'
-    skill_3 = 'Database'
+
+    if universal_username is None:
+        return render(request,'loginerror.html')
+    
+    user_data = {
+        'username' : universal_username[0]
+    }
+
+    connection = psycopg2.connect(**db_config)
+    cursor = connection.cursor()
+
+
+    sql_query = "SELECT * FROM \"profile\" where username=%s;"
+    cursor.execute(sql_query,(universal_username,))
+
+    retrieved_data = cursor.fetchall()
+    retrieved_data = retrieved_data[0]
+
+    res = retrieved_data
+
+
+    rank = res[0]
+    user_name = user_data['username']
+
+    skills = res[2].split(',')
+
+    skill_1 = skills[0]
+    skill_2 = skills[1]
+    skill_3 = skills[2]
     activity_1 ='Operating System Notes'
     activity_2 ='Software Engineering'
     activity_3 ='Principles Of Programming Language'
-    gender= 'Male'
-    country = 'India'
-    linkedin = 'xyz@gmail.com'
-    activity_points = int(30210)
-    context = {'user_name':user_name,
+    gender= res[3]
+    country = res[4]
+    linkedin = res[5]
+    activity_points = res[6]
+    context = {'username':user_name,
                'rank': rank,
                'skill_1':skill_1,
                'skill_2':skill_2,
@@ -281,7 +341,19 @@ def profile_page(request):
                }
 
     return render(request,'profile_page.html' ,context )
+
 def notespedia(request):
     return render(request,'notespedia.html')
-# random
 
+
+def cse(request):
+    return render(request,'cse.html')
+
+
+def loginerror(request):
+    return render(request,'loginerror.html')
+
+
+
+
+# random
