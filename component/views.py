@@ -353,6 +353,9 @@ def cse(request):
 def loginerror(request):
     return render(request,'loginerror.html')
 
+def team(request):
+    return render(request,'team.html')
+
 
 
 
