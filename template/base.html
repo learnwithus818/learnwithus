@@ -148,9 +148,23 @@
         }
 
         footer{
-            position: relative;
-            bottom: 0;
+            /* position: relative; */
+            /* bottom: 0; */
             margin-left: -.5rem;
+        }
+
+        @media (max-width:800px){
+            header img{
+                display: none;
+            }
+            footer .links{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                place-content: center;
+                row-gap: 1rem;
+            }
         }
 
 
@@ -179,7 +193,8 @@
             <div><a href="courses">Courses</a></div>
             <div><a href="opportunities">Opportunities</a></div>
             <div><a href="book">Books</a></div>
-            <div><a href="techblog">Techblogs</a></div>
+            <!-- Removing techblog for now -->
+            <!-- <div><a href="techblog">Techblogs</a></div> -->
             <div><a href="profile_page">Profile</a></div>
             
             {% if username is not None %}
@@ -205,12 +220,12 @@
             <img src="{% static 'images/facebook.png' %}" alt="">
 
         </div>
-        <div>
+        <div class="links">
             <a href="about">About</a>
             <a href="copyright">Copyright</a>
             <a href="">Terms and Condition</a>
-            <a href="contact">Contact Us</a>
-            <a href="team">Team</a>
+            <a href="contact">Contact_Us</a>
+            <a href="about">Team</a>
         </div>
 
     </footer>

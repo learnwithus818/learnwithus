@@ -152,6 +152,18 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
+        @media (min-width:800px){
+            .right h1{
+                padding: 0 !important;
+                margin-top: 1rem;
+                padding-top: 3rem !important;
+            }
+            .register-btn-div{
+                margin-top: -3rem !important;
+            }
+        }
+
+
         @media (max-width:800px){
             .left{
                 display: none;
@@ -183,6 +195,17 @@
                 /* color: rgb(22, 33, 62); */
 
             }
+            .right h1{
+                color: white !important;
+                padding: 0 !important;
+                margin-top: 1rem;
+                padding-top: 3rem !important;
+            }
+        }
+        @media (max-width: 600px){
+            .login-form input{
+                width: 50vw;
+            }
         }
 
 
@@ -211,7 +234,7 @@
                 {% csrf_token %}
     
                 <div>
-                    <h1 style="text-align: center; color: rgb(22, 32, 62); font-family: cursive; padding-bottom: 2rem;">Welcome !</h1>
+                    <h1 style="text-align: center; color: rgb(22, 32, 62); font-family: cursive;">Welcome !</h1>
                     <h2>Let's create your account</h2>
                 </div>
     
@@ -239,7 +262,7 @@
                 <div class="login-button">
                     <input type="submit" value="Create Account">
                     <br>
-                    <p style="color: rgb(22, 33, 62); text-align: center;">{{error}}</p>
+                    <p style="color: red; text-align: center;">{{error}}</p>
                 </div>
     
             </form>
@@ -247,7 +270,7 @@
                 <a href="">Register Now</a>
             </div> -->
              <div class="register-btn-div">
-                <a href="/" class="register-btn">Login Now</a>
+                <a href="login" class="register-btn">Login Now</a>
             </div>
         </div>
 
