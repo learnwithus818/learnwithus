@@ -13,22 +13,14 @@ db_config = {
     'port': '34452'
 }
 
-
-
-<<<<<<< Updated upstream
-# global universal_username
-=======
-
-
->>>>>>> Stashed changes
 universal_username = None
 data = ''
 
-# import attr 
+# import attr
 # @attr.s(frozen=True)
 # class ImmutableClass:
 #     universal_username = attr.ib()
-    
+
 # obj = ImmutableClass("Test Name")
 
 
@@ -127,7 +119,7 @@ def register(request):
 def home(request):
     if universal_username is None:
         return render(request,'home.html')
-    
+
     user_data = {
         'username' : universal_username[0]
     }
@@ -175,7 +167,7 @@ def techblog(request):
         rows = cursor.fetchall()
         result = rows[-1:-4:-1]
 
-        
+
         value = {
                 'data':result,
                 'username':universal_username
@@ -298,7 +290,7 @@ def profile_page(request):
 
     if universal_username is None:
         return render(request,'loginerror.html')
-    
+
     user_data = {
         'username' : universal_username[0]
     }
@@ -348,9 +340,6 @@ def profile_page(request):
     return render(request,'profile_page.html' ,context )
 
 def notespedia(request):
-<<<<<<< Updated upstream
-    return render(request,'notespedia.html')
-=======
     opportunities_for_fresher= ['Web Developer', 'App Developer' , 'Software Engineer', 'iOS Engineer', 'AI Developer', 'NLP Engineer', 'Data Scientist','Data Analyst', 'Data Engineer', 'Course Engineer']
     referance_books=['Sebesta, "Concept of Programming Language", Addison Wesley, 4th Edition, 2019',
                      ' Deitel & Deitel, “Internet and World Wide Web – How to Program”, Goldberg,Pearson Education. 3rd Edition 2003',
@@ -362,8 +351,7 @@ def notespedia(request):
         'referance_books':referance_books
     }
     return render(request,'notespedia.html',context)
-# random
->>>>>>> Stashed changes
+
 
 
 def cse(request):
