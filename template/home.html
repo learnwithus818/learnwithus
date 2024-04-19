@@ -204,7 +204,7 @@
 
     .competition video {
         transform: skew(-10deg);
-        height: 30vw;
+        height: 25vw;
         /* margin-left: 5vw; */
         border-radius: 1rem;
 
@@ -215,6 +215,10 @@
         flex-direction: column;
         row-gap: 6vw;
         margin-top: 4vw;
+    }
+
+    .container-img img{
+        height: 25vw;
     }
 
     .video{
@@ -266,6 +270,9 @@
         }
         .video{
             flex-direction: column-reverse;
+        }
+        .competition video{
+            height: 35vw;
         }
     }
 
@@ -339,7 +346,7 @@ LearnWithUs - Shaping Tech Genius
 
 
         {% if username is not None %}
-        <p style="font-size: 2rem;">Welcome back {{username}} !</p>
+        <p style="font-size: 2rem;">Welcome back {{name}} !</p>
         <input type="text" placeholder="What do you wanna learn today !">
 
         {% else %}

@@ -9,7 +9,227 @@ TechBlogs | LearnWithUs
 
 {% block style %}
 
+<style>
 
+    .data{
+        display: grid;
+        grid-template-columns: 2fr 1.3fr;
+        justify-content: center;
+        align-items: center;
+        place-content: center;
+    }
+
+    .blog h1{
+        border: 1px solid gray;
+        color: white;
+        background-color: rgb(22,33,62);
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+    }
+
+    .left{
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px rgb(22,33,62);
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .left .fulldata{
+        border: 1px solid rgb(22,33,62);
+        box-shadow: 1px 1px 4px rgb(22,33,62);
+        padding: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;    
+        flex-wrap: nowrap;
+        column-gap: 1vw;
+        align-items: center;
+        place-content: center;
+    }
+
+    .readmore a{
+        border: 1px solid rgb(22,33,62);
+        background-color: rgb(22,33,62);
+        color: white;
+        padding: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: .5rem;
+        word-wrap: nowrap;
+        width: 20vw; 
+    }
+
+    .right{
+        border: 1px solid white;
+        box-shadow: 2px 2px 6px rgb(22,33,62);
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;    
+        padding-bottom: 3rem;
+    }
+
+    .searchbar input{
+        outline: none;
+        background-color: transparent;
+        border: 0;
+    }
+    .searchbar{
+        border: 1px solid rgb(22,33,62);
+        width: fit-content;
+        padding: .75rem;
+        padding-left: 1rem;
+        /* padding-right: 1rem; */
+        border-radius: .5rem;
+    }
+
+    .searchbar a{
+        background-color: rgb(22,33,62);
+        color: white;
+        border-radius: .5rem;
+        /* margin: 0; */
+        /* margin-top: .1rem; */
+        padding: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tagsection{
+        box-shadow: 2px 2px 5px rgb(22,33,62);
+        border-radius: 1rem;
+        padding-top: .3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tagsection .tags{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        padding: 0;
+        /* row-gap: -1.5rem; */
+
+    }
+
+    .tagsection .tags h4{
+        border: 1px solid rgb(22,33,62);
+        border-radius: .75rem;
+        color: rgb(22,33,62);
+        padding: .75rem;
+        margin-top: .25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .signin-msg{
+        text-align: center;
+        border: 1px solid white;
+        box-shadow: 1px 1px 4px white;
+        background-color: rgb(22,33,62);
+        color: white;
+        padding: .753rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: .5rem;
+    }
+
+    .writeblog textarea{
+        width: 35vw;
+        height: 5vw;
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: 1px 1px 4px rgb(22,33,62);
+        margin-bottom: .5rem;
+    }
+
+    .writeblog input{
+        background-color: rgb(22,33,62);
+        color: white;
+        padding: .5rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        border-radius: .5rem;
+        font-weight: 600;
+
+    }
+
+    .left, .right{
+        height: 27.5rem;
+    }
+    .left{
+        overflow: scroll;
+    }
+    .left::-webkit-scrollbar{
+        display: none;
+    }
+
+
+
+    @media (max-width: 800px){
+        .data{
+            display: flex;
+            flex-direction: column;
+        }
+        .writeblog textarea{
+            width: 80vw;
+            height: 10vw;
+        }
+
+    }
+
+    
+
+    @media (max-width:600px){
+        .fulldata{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width:480px){
+
+        .right{
+            height: 120vw;
+            margin-bottom: 5rem;
+        }
+
+        .submit-div{
+            margin-bottom: 10rem;
+        }
+        .reflink{
+            width: 10rem;
+        }
+
+    }
+
+    @media (max-width:395px){
+        
+        .right{
+            height: 140vw;
+            margin-bottom: 5rem;
+        }
+    }
+
+    @media (max-width:345px){
+        
+        .right{
+            height: 160vw;
+            margin-bottom: 5rem;
+        }
+    }
+
+    @media (max-width:333px){
+        
+        .right{
+            height: 180vw;
+            margin-bottom: 5rem;
+        }
+    }
+
+</style>
 
 {% endblock %}
 
@@ -33,20 +253,20 @@ TechBlog @ LearnWithUs
             {% for i in data %}
 
             {% for j in i %}
-            <div class="blog">
+            <div class="blog fulldata">
                 <div class="content">
                     <p>
                         {{j}}
                     </p>
                 </div>
                 <div class="readmore">
-                    <a href="techblog">Read more</a>
+                    <a href="techblog">Read_more</a>
                 </div>
             </div>
 
 
             {% endfor %}
-
+            <br>
             {% endfor %}
 
         </div>
@@ -55,34 +275,15 @@ TechBlog @ LearnWithUs
 
 
     <div class="right">
-
-        <div class="for-responsiveness">
-            <div class="searchbar">
-                <input type="text" placeholder="Search for blogs..">
-                <a href="">Search</a>
-            </div>
-            <div class="tagsection">
-                <h3>Tags</h3>
-                <div>
-                    <h4>NLP</h4>
-                    <h4>AI/ML</h4>
-                    <h4>Web Dev</h4>
-                    <h4>App Dev</h4>
-                    <h4>DataBase</h4>
-                    <h4>Web Dev</h4>
-                    <h4>NLP</h4>
-                </div>
-            </div>
-        </div>
-
-
         <div class="searchbar">
             <input type="text" placeholder="Search for blogs..">
             <a href="">Search</a>
         </div>
         <div class="tagsection">
-            <h3>Tags</h3>
             <div>
+                <h3>Tags</h3>
+            </div>
+            <div class="tags">
                 <h4>NLP</h4>
                 <h4>AI/ML</h4>
                 <h4>Web Dev</h4>
@@ -93,21 +294,36 @@ TechBlog @ LearnWithUs
             </div>
         </div>
         <!-- <div> -->
+        
+        {% if username is not None %}
+        
         <form action="techblog" method="POST">
             <div class="writeblog">
                 {% csrf_token %}
 
-                <textarea name="content">Start writing your blog here....</textarea>
+                <textarea name="content">Start writing your blog here....(Please remove this text)</textarea>
+                <input class="reflink" name = "reflink" type="text" placeholder="Place the link of your reference" style="background-color: white; width: 15vw; margin-bottom: .75rem;">
 
-                <div>
-                    <input type="submit" value="Submit">
+                <span style="color: red; padding-left: 1rem;">
+                    {{error}}
+                </span>
+                
+                <div class="submit-div">
+                    <input class="submit" type="submit" value="Submit">
                 </div>
                 <!-- </div> -->
             </div>
         </form>
 
+        {% else %}
+
+        <p class="signin-msg"><a href="login">Login In to write your own blogs</a></p>
+
+        {% endif %}
+
+
     </div>
-    <br><br>
+
 
 </div>
 
