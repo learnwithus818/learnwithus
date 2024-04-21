@@ -4,8 +4,6 @@
 
 <head>
 
-    
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -148,9 +146,23 @@
         }
 
         footer{
-            position: relative;
-            bottom: 0;
+            /* position: relative; */
+            /* bottom: 0; */
             margin-left: -.5rem;
+        }
+
+        @media (max-width:800px){
+            header img{
+                display: none;
+            }
+            footer .links{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                place-content: center;
+                row-gap: 1rem;
+            }
         }
 
 
@@ -179,6 +191,7 @@
             <div><a href="courses">Courses</a></div>
             <div><a href="opportunities">Opportunities</a></div>
             <div><a href="book">Books</a></div>
+            <!-- Adding Techblog now -->
             <div><a href="techblog">Techblogs</a></div>
             <div><a href="profile_page">Profile</a></div>
             
@@ -199,18 +212,26 @@
     <footer>
 
         <div>
-            <img src="{% static 'images/linkedin.png'  %}" alt="">
-            <img class="twitter" src="{% static 'images/twitter.png' %}" alt="">
-            <img src="{% static 'images/instagram.png' %}" alt="">
-            <img src="{% static 'images/facebook.png' %}" alt="">
+            <a href="https://www.linkedin.com/company/learnwithus818/" target="_blank">
+                <img src="{% static 'images/linkedin.png'  %}" alt="">
+            </a>
+            <a href="home" target="_blank">
+                <img class="twitter" src="{% static 'images/twitter.png' %}" alt="">
+            </a>
+            <a href="home" target="_blank">
+                <img src="{% static 'images/instagram.png' %}" alt="">
+            </a>
+            <a href="home" target="_blank">
+                <img src="{% static 'images/facebook.png' %}" alt="">
+            </a>
 
         </div>
-        <div>
+        <div class="links">
             <a href="about">About</a>
             <a href="copyright">Copyright</a>
             <a href="terms_and_conditions">Terms and Condition</a>
-            <a href="contact">Contact Us</a>
-            <a href="team">Team</a>
+            <a href="contact">Contact_Us</a>
+            <a href="about">Team</a>
         </div>
 
     </footer>

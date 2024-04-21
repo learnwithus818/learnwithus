@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <img src="../static/images/logo3.png" alt="" >
-        <h2 class="heading">LearnWithUs</h2>
+        <h1 class="heading">LearnWithUs</h1>
 
     </div>
     <div class="nav">
@@ -25,18 +25,101 @@
             <li5 class="navv_list_items"><a href="techblog">Techblogs</a></li5>
         </ul>
     </div>
-    <h1 style="color: #16213E; padding-left: 2rem; padding-bottom: 0px; font-weight: bold; font-family: Jaldi; margin: 1.5rem 0rem 0rem 0rem;">Explore Your Academics Notes :</h1>
+    <h1 class="explore_heading">Explore Your Academics Notes :</h1>
     <!-- this is for underline below the text and used inline css  -->
-    <div style="width: 24rem; height: 0.2rem; background-color: #16213E; position: relative;top:-0.5rem; left: 1.5rem;"></div>
-    <div style="width: 24rem; height: 0.2rem; background-color: #16213E; position: relative;top:-0.25rem; left:3.5rem;"></div>
+    <div class="horizontal_line_1"></div>
+    <div class="horizontal_line_2" ></div>
 
     <!-- from here codes is below explore courses line -->
     <div class="main_container">
-        <div1 class="left_container">
-            <input type="search" name="search_bar" id="search"> <button class="button"><img src="../static/notespedia_images/icons8-search-50.png" alt=""></button>
+        <div class="left_container">
+            <section class="search">
+                <input type="search" name="search_bar" class="search_box" placeholder="Search Here....">
+                <button class="search_button"><img src="../static/notespedia_images/icons8-search-50.png" alt="">Search</button>
+            </section>
+            <section class="opportunities_for_freshsers">
+                <h3 class="opportunities_for_freshers_heading">
+                    See Available Option For Freshers :</h3>
+                    <div class="opportunities_container">
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.0}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.1}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.2}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.3}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.4}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.5}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.6}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.7}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.8}}</a></ul>
+                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.9}}</a></ul>
+                    </div>
 
-        </div1>
-        <div2 class="right_container">right one</div2>
+            </section>
+            <section class="reference_books">
+                <h1 class="reference_books_heading">
+                    Reference Books
+                </h1>
+                <div class="reference_books_container">
+                    <ul class="reference_books_items">
+                        <a href="#"></a>
+                    </ul>
+                    <ul class="reference_books_items"><a href="#">{{referance_books.0}}</a></ul>
+                    <ul class="reference_books_items"><a href="#">{{referance_books.1}}</a></ul>
+                    <ul class="reference_books_items"><a href="#">{{referance_books.2}}</a></ul>
+                    <ul class="reference_books_items"><a href="#">{{referance_books.3}}</a></ul>
+                    <ul class="reference_books_items"><a href="#">{{referance_books.4}}</a></ul>
+
+
+                </div>
+            </section>
+
+        </div>
+        <div class="right_container">
+            <section class="right_container_heading" style="border: 0;">
+                <h2 class="right_container_head">
+                    Branch Wise Notes
+                </h2>
+            </section>
+            <section class="notes_container">
+                <ul class="notes_items">
+                   <a href="#" class="notes_items_logo">
+                    <img src="{%static 'images/computer_science_and_engineering.png'%}" alt="" class="notes_items_logo">
+                   </a>
+                </ul>
+                <ul class="notes_items">
+                    <a href="#" class="notes_items_logo">
+                        <img src="{%static 'images/electrical_engineering.png'%}" alt="" class="notes_items_logo">
+                    </a>
+                </ul>
+                <ul class="notes_items">
+                    <a href="#" class="notes_items_logo">
+                        <img src="{%static 'images/electronics_engineering.png'%}" alt="" class="notes_items_logo">
+                    </a>
+                </ul>
+                <ul class="notes_items">
+                    <a href="#" class="notes_items_logo">
+                        <img src="{%static 'images/civil_engineering.png'%}" alt="" class="notes_items_logo">
+                    </a>
+                </ul>
+                <ul class="notes_items">
+                    <a href="#" class="notes_items_logo">
+                        <img src="{%static 'images/mechanical_engineering.png'%}" alt="" class="notes_items_logo">
+                    </a>
+
+
+                </ul>
+                <ul class="notes_items">
+                    <a href="#" class="notes_items_logo">
+                        <img src="{%static 'images/information_technology.png'%}" alt="" class="notes_items_logo">
+                    </a>
+
+                </ul>
+                <ul class="notes_items"></ul>
+
+            </section>
+            <a href="#" class="show_more_branches_a"><p class="show_more_branches">
+                View All Branches
+            </p></a>
+        </div>
     </div>
 </body>
 </html>

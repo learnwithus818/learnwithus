@@ -83,14 +83,27 @@ WSGI_APPLICATION = "learnwithus.wsgi.application"
 # }
 
 
+# DATABASES = {
+#     'default':{
+#         "ENGINE":"django.db.backends.postgresql",
+#         "NAME":'railway',
+#         "USER":'postgres',
+#         'PASSWORD':'UinbkcXWLRHOEiTRXhjTkJumhgqRvjCh',
+#         'HOST':'viaduct.proxy.rlwy.net',
+#         'PORT':'34452'
+
+#     }
+# }
+
+
 DATABASES = {
     'default':{
         "ENGINE":"django.db.backends.postgresql",
-        "NAME":'railway',
-        "USER":'postgres',
-        'PASSWORD':'UinbkcXWLRHOEiTRXhjTkJumhgqRvjCh',
-        'HOST':'viaduct.proxy.rlwy.net',
-        'PORT':'34452'
+        "NAME":'postgres',
+        "USER":'fx818',
+        'PASSWORD':'@Anurag818@',
+        'HOST':'learnwithus.postgres.database.azure.com',
+        'PORT':'5432'
 
     }
 }

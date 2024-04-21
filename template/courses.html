@@ -76,12 +76,47 @@
         padding-right: 1.1rem;
         border-radius: 1rem;
     }
+
+
+    @media (max-width:700px){
+        .explore-head{
+            margin-top: 2rem;
+            margin-left: 0;
+            padding-left: .5rem;
+            line-height: 1;
+        }
+        .explore-head h1{
+            margin-left: 0;
+            font-size: 1.5rem;
+            border-bottom: 0;
+        }
+        .course{
+            border: 2px solid rgb(22, 33, 62);
+            box-shadow: 1px 1px 5px rgb(22, 33, 62);
+            width: fit-content;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .even{
+            display: flex;
+            flex-direction: column-reverse;
+
+        }
+        .course .textdata{
+            margin-bottom: 2rem;
+        }
+    }
+
+
+
 </style>
 {% endblock %}
 
 
 {% block title %}
-Courses | LearnWithUs
+Courses @ LearnWithUs
 {% endblock %}
 
 {% block heading %}
@@ -114,7 +149,7 @@ Courses @ LearnWithUs
     </div>
 
 
-    <div class="course">
+    <div class="course even">
         <div class="textdata">
             <p>Python is among one of the best programming languages in the world. Python have a lot application in
                 various domains including Web development, Machine Learning, Neural Networks, Deep Learning etc...
@@ -144,7 +179,7 @@ Courses @ LearnWithUs
     </div>
 
 
-    <div class="course">
+    <div class="course even">
         <div class="textdata">
             <p>HTML (Hypertext Markup Language) is the standard language for creating web pages and applications. It
                 provides the structure and content of a webpage through a system of tags, enabling browsers to interpret

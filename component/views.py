@@ -5,25 +5,39 @@ from django.shortcuts import render,redirect
 import psycopg2
 
 # PostgreSQL connection parameters
+# db_config = {
+#     'dbname': 'postgres',
+#     'user': 'fx818',
+#     'password': '@Anurag818@',
+#     'host': 'learnwithus.postgres.database.azure.com',
+#     'port': '5432'
+# }
+
+# db_config = psycopg2.connect(user="fx818", password="@Anurag818@", host="learnwithus.postgres.database.azure.com", port=5432, database="postgres")
+
+
 db_config = {
-    'dbname': 'railway',
-    'user': 'postgres',
-    'password': 'UinbkcXWLRHOEiTRXhjTkJumhgqRvjCh',
-    'host': 'viaduct.proxy.rlwy.net',
-    'port': '34452'
+    'user': 'fx818',
+    'password': '@Anurag818@',
+    'host': 'learnwithus.postgres.database.azure.com',
+    'port': 5432,
+    'database': 'postgres'
 }
 
+connection = psycopg2.connect(**db_config)
 
 
-# global universal_username
+
+
 universal_username = None
+name = None
 data = ''
 
-# import attr 
+# import attr
 # @attr.s(frozen=True)
 # class ImmutableClass:
 #     universal_username = attr.ib()
-    
+
 # obj = ImmutableClass("Test Name")
 
 
@@ -33,13 +47,11 @@ def logout(request):
     global universal_username
     universal_username = None
     user_data = {
-        'username' : None
+        'username' : None,
+        'name' : None
     }
 
     return render(request,'home.html',user_data)
-
-
-
 
 
 def login(request):
@@ -60,25 +72,23 @@ def login(request):
         sql_query = "SELECT * FROM \"user\" where username = %s;"
         cursor.execute(sql_query,(username,))
 
-    # Fetch all rows from the result set
         rows = cursor.fetchall()
-
-        # command = 'select * from user where username = %s'
-        # mycursor.execute(command,(username,))
-
         res = rows
+
+        global name
+        name = res[0][0]
 
         if len(res)!=0 and res[0][-1] == password:
 
             global universal_username
             universal_username = (username,)
 
-
             # home(request)
             user_data = {
-                'username' : universal_username[0]
+                'username' : universal_username[0],
+                'name' : name
             }
-            data = username
+            # data = username
             return render(request,'home.html',user_data)
             # return redirect('home')
 
@@ -91,6 +101,7 @@ def login(request):
     else:
         return render(request,'index.html')
 
+
 def register(request):
     connection = psycopg2.connect(**db_config)
     cursor = connection.cursor()
@@ -101,6 +112,17 @@ def register(request):
         email = request.POST['email']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
+        skills = request.POST['skills']
+        gender = request.POST['gender']
+        country = request.POST['country']
+        linkedin = request.POST['linkedin']
+        activitypoint = 0
+
+        query = "select rank from \"profile\";"
+        cursor.execute(query)
+
+        res = cursor.fetchall()
+        rank = int(res[-1][0])
 
         if password1 != password2:
             err_msg = {
@@ -108,9 +130,11 @@ def register(request):
             }
             return render(request,'register.html',err_msg)
 
-
-        command = "INSERT INTO \"user\" (name, username, email, password) VALUES (%s, %s, %s, %s)"
-        cursor.execute(command, (name, username, email, password1))
+        command1 = "INSERT INTO \"user\" (name, username, email, password) VALUES (%s, %s, %s, %s)"
+        command2 = "INSERT INTO \"profile\" (rank, username, skills, gender, country, linkedin, activitypoint) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+        cursor.execute(command1, (name, username, email, password1))
+        connection.commit()
+        cursor.execute(command2, (rank+1,username,skills,gender,country,linkedin,activitypoint))
         connection.commit()
 
         return redirect('home')
@@ -122,9 +146,10 @@ def register(request):
 def home(request):
     if universal_username is None:
         return render(request,'home.html')
-    
+
     user_data = {
-        'username' : universal_username[0]
+        'username' : universal_username[0],
+        'name' : name
     }
     return render(request,'home.html',user_data)
 
@@ -132,8 +157,9 @@ def home(request):
 def techblog(request):
     connection = psycopg2.connect(**db_config)
     cursor = connection.cursor()
-    link = 'null'
-    username = 'fx818'
+    # global universal_username
+    global universal_username
+    username = universal_username
 
     sql_query = "SELECT content FROM \"blogs\";"
 
@@ -147,9 +173,8 @@ def techblog(request):
 
     rows = cursor.fetchall()
     # result = rows[-1:-4:-1]
-    result = rows
+    result = rows[::-1]
 
-    global universal_username
 
     value = {
             'data':result,
@@ -158,19 +183,42 @@ def techblog(request):
 
     if request.method == 'POST':
         content = request.POST['content']
-        query = 'insert into blogs values(%s,%s,%s,%s)'
-        values = (nid+1,username,content,link)
-        cursor.execute(query,values)
-        connection.commit()
+        link = request.POST['reflink']
 
         sql_query = "SELECT content FROM \"blogs\";"
         cursor.execute(sql_query)
-
-
         rows = cursor.fetchall()
-        result = rows[-1:-4:-1]
+        result = rows[::-1]
 
-        
+
+        if len(content)==0 or content == "Start writing your blog here....(Please remove this text)" or content=='nill':
+            
+            errmsg={
+                'username':universal_username,
+                'error':'Please write some of your content !',
+                'data':result,
+                'username':universal_username
+
+            }
+
+            if content=='nill':
+
+
+                errmsg['error']  = ''
+
+                return render(request,'techblog.html',errmsg)
+
+        query = 'insert into blogs values(%s,%s,%s,%s)'
+        values = (nid+1,username,content,link)
+        cursor.execute(query,values)
+        connection.commit()  
+        sql_query = "SELECT content FROM \"blogs\";"
+        cursor.execute(sql_query)
+        rows = cursor.fetchall()
+        result = rows[::-1]
+
+        content = 'nill'
+
         value = {
                 'data':result,
                 'username':universal_username
@@ -293,7 +341,7 @@ def profile_page(request):
 
     if universal_username is None:
         return render(request,'loginerror.html')
-    
+
     user_data = {
         'username' : universal_username[0]
     }
@@ -343,7 +391,18 @@ def profile_page(request):
     return render(request,'profile_page.html' ,context )
 
 def notespedia(request):
-    return render(request,'notespedia.html')
+    opportunities_for_fresher= ['Web Developer', 'App Developer' , 'Software Engineer', 'iOS Engineer', 'AI Developer', 'NLP Engineer', 'Data Scientist','Data Analyst', 'Data Engineer', 'Course Engineer']
+    referance_books=['Sebesta, "Concept of Programming Language", Addison Wesley, 4th Edition, 2019',
+                     ' Deitel & Deitel, “Internet and World Wide Web – How to Program”, Goldberg,Pearson Education. 3rd Edition 2003',
+                     'Petersons, "Operating Systems", Addison Wesley, 9th Edition, 2012',
+                     'Forouzan, B. A., Data Communications and Networking, McGraw-Hill Higher Education,3rd Edition, 2004.',
+                     'A.S. Tannenbaum, “Computer Networks”, 3rd Edition, Prentice Hall India, 1997.']
+    context= {
+        'opportunities_for_fresher':opportunities_for_fresher,
+        'referance_books':referance_books
+    }
+    return render(request,'notespedia.html',context)
+
 
 
 def cse(request):
@@ -358,6 +417,19 @@ def team(request):
 
 def terms_and_conditions(request):
     return render(request, 'terms_and_conditions.html')
+
+
+# connection = psycopg2.connect(**db_config)
+# cursor = connection.cursor()
+# query = "select rank from \"profile\";"
+# cursor.execute(query)
+
+# sql_query = "SELECT * FROM \"user\" where username = 'edith27401';"
+# cursor.execute(sql_query)
+
+# rows = cursor.fetchall()
+# res = rows
+# print(res[0][0])
 
 
 # random
