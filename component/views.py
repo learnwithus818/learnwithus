@@ -75,11 +75,11 @@ def login(request):
         rows = cursor.fetchall()
         res = rows
 
-        global name
-        name = res[0][0]
 
         if len(res)!=0 and res[0][-1] == password:
 
+            global name
+            name = res[0][0]
             global universal_username
             universal_username = (username,)
 
