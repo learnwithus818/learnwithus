@@ -38,7 +38,7 @@
     }
 
     .intro .images img {
-        height: 10rem;
+        height: 7rem;
         transform: skew(-10deg);
     }
 
@@ -89,6 +89,31 @@
         padding-right: 1rem;
 
     }
+
+    .end{
+        /* padding: 2rem; */
+        margin: 2rem;
+    }
+
+    .core{
+        height: 24rem;
+    }
+
+    @media screen and (max-width:800px){
+        .intro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            place-content: center;
+        }
+
+        .up .intro{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            place-content: center;
+        }
+    }
 </style>
 {% endblock %}
 
@@ -109,6 +134,7 @@ About @ LearnWithUs
     <h1>About LearnWithUs</h1>
 </div>
 <section>
+    <div class="up">
     <div class="intro">
         <p>LearnWithUs is an educational platform that is currently 
             being developed to meet the need of the college students irrespective of 
@@ -123,6 +149,7 @@ About @ LearnWithUs
         </div>
 
     </div>
+</div>
 </section>
 
 <div class="head">
@@ -148,6 +175,7 @@ About @ LearnWithUs
     <h1>Why We Are</h1>
 </div>
 <section>
+    <div class="up">
     <div class="intro">
         <p>At LearnWithUs, we're passionate about transforming education and empowering learners.We believe in harnessing the power of technology to revolutionize education. Our team is dedicated to creating cutting-edge solutions that make learning more engaging, accessible, and effective.Our priority is the success and satisfaction of our learners. We strive to understand their unique needs and preferences to tailor our offerings accordingly, ensuring a personalized and rewarding learning experience for each individual.
         </p>
@@ -158,14 +186,17 @@ About @ LearnWithUs
             
     </div>
     </div>
+</div>
 </section>
 <div class="head-last">
     <h1>Key Features of LearnWithUs</h1>
 </div>
-<section>
+<div class="end">
+<!-- <section> -->
     <div class="intro">
         <!-- <div class="features"> -->
         <section>
+        <div class="core">
          <div class="textdata">
         <div class="images">
             <img src="{% static 'aboutimages/courses.webp' %}" alt="">
@@ -178,8 +209,10 @@ About @ LearnWithUs
                 <br>
                 Our Courses section includes Linux,HTML,Python,CSS and many other skill development cources
             </p>
+        </div>
         </section>
         <section>
+            <div class="core">
             <div class="textdata">
                 <div class="images">
                     <img src="{% static 'aboutimages/oppor.jpg' %}" alt="">
@@ -190,9 +223,11 @@ About @ LearnWithUs
                 Scholarships details for 1st year college students ,Upcoming Hackathons Details, competitions and Job Opportunities to job seekers.
                 
             </p>
+        </div>
                 </section>
     <!-- </div> -->
     <section>
+        <div class="core">
     <div class="textdata">
         <div class="images">
             <img src="{% static 'aboutimages/notes.jpeg' %}" alt="">
@@ -205,8 +240,10 @@ About @ LearnWithUs
                 such as interview question, programming question, cheat sheet, 
                 roadmap etc.
             </p> 
+        </div>
         </section>
         <section>
+            <div class="core">
             <div class="textdata">
                 <div class="images">
                     <img src="{% static 'aboutimages/techblog.jpeg' %}" alt="">
@@ -217,12 +254,13 @@ About @ LearnWithUs
                         latest news trends. User will be able to upload their own blogs which 
                         will be visible to all other users.
                     </p>
+                </div>
                 </section>
     <!-- </div> -->
     </div>
-</section>
+<!-- </section> -->
 
-
+</div>
     
 
 

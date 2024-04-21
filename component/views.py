@@ -356,7 +356,8 @@ def loginerror(request):
 def team(request):
     return render(request,'team.html')
 
-
+def terms_and_conditions(request):
+    return render(request, 'terms_and_conditions.html')
 
 
 # random

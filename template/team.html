@@ -4,34 +4,23 @@
 
 {% block style %}
 <style>
-    /* .explore-head {
-        margin-top: 5vw;
-        margin-bottom: 5vw;
-        margin-left: 2rem;
-        width: fit-content;
-        padding: 0;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-bottom: 1rem;
-
-    } */
-    .course .images h1{
+    .member .images h1{
         font-family: 'Alkatra';
         color: rgb(22, 33, 62);
-        margin-left: 15%;
+        margin-left: 10%;
+        margin-top: -2%;
     }
 
-    .explore-head h1 {
+    .team-head h1 {
         color: rgb(22, 33, 62);
         text-decoration: underline;
-        /* border-bottom: 4px solid rgb(22, 33, 62); */
         padding-left: 0;
         margin-left: 1rem;
         font-family: 'Alkatra';
         padding-bottom: 0rem;
     }
 
-    .allcourses {
+    .allmembers {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -41,7 +30,7 @@
         margin-bottom: 10vw;
     }
 
-    .course {
+    .member {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
@@ -59,32 +48,17 @@
         align-items: center;
     }
 
-    .course .images img {
-        /* height: 10rem;
-        transform: skew(-10deg); */
+    .member .images img {
         border-radius: 5%;
         width: 25vw;
-        /* height: 30vh; */
-        /* border: 2px solid rgb(22, 33, 62); */
     }
 
 
-    .course .textdata p {
+    .member .textdata p {
         font-weight: 550;
         width: 60%;
         text-wrap: wrap;
-        /* text-align: center; */
     }
-
-    /* .course a {
-        border: 1px solid gray;
-        background-color: rgb(22, 33, 62);
-        color: white;
-        padding: .5rem;
-        padding-left: 1.1rem;
-        padding-right: 1.1rem;
-        border-radius: 1rem;
-    } */
     .info{
         display: flex;
         justify-content: space-between;
@@ -99,9 +73,9 @@
     }
 
     h2{
-        /* font-size: larger; */
         font-family: 'Alkatra';
     }
+
 </style>
 {% endblock %}
 
@@ -118,13 +92,13 @@ Team @ LearnWithUs
 
 
 {% block content %}
-<div class="explore-head">
+<div class="team-head">
     <h1>Meet Our Team!</h1>
 </div>
 
-<div class="allcourses">
+<div class="allmembers">
 
-    <div class="course">
+    <div class="member">
         <div class="images">
             <img  src="{% static 'team/anurag2.png' %}" alt="">
             <h1>Anurag Upadhyay </h1>
@@ -134,32 +108,31 @@ Team @ LearnWithUs
             <ul>
                 <li><strong>Education:</strong>Pursuing B.Tech from HBTU Kanpur (2022-2026)</li>
                 <br>
-                <li><strong>Skills:</strong>HTML,CSS,JS,DJango,Numpy,pandas,matplotlib,MySQL....</li>
+                <li><strong>Skills:</strong>HTML,CSS,JS,Python,DJango,Numpy,pandas,matplotlib,MySQL....</li>
             </ul>
             <div class="info">
-                <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADPB9WkB1xnCV-gs7kR91ynz1lo7XxQ1NAs&keywords=anurag%20upadhyay&origin=RICH_QUERY_SUGGESTION&position=0&searchId=1f81105a-853b-49f2-955a-3946881c0721&sid=a0C&spellCorrectionEnabled=false"><img src="{% static 'images/linkedin.png'  %}" alt=""></a>
-                <!-- <img src="{% static 'images/linkedin.png'  %}" alt=""> -->
-                <img src="{% static 'images/twitter.png' %}" alt="">
-                <img src="{% static 'images/instagram.png' %}" alt="">
-                <img src="{% static 'images/facebook.png' %}" alt="">
+                <a href="https://www.linkedin.com/in/anuragfx818/"><img src="{% static 'images/linkedin.png'  %}" alt=""></a>
+                <a href=""><img src="{% static 'images/twitter.png' %}" alt=""></a>
+                <a href="https://www.instagram.com/818anurag?igsh=amZtcHdheXRwem91"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a>
             </div>
         </div>
     </div>
 
 
-    <div class="course">
+    <div class="member">
         <div class="textdata">
             <h2>Co-Founder And Developer</h2>
             <ul>
                 <li><strong>Education:</strong>Pursuing B.Tech from HBTU Kanpur (2022-2026)</li>
                 <br>
-                <li><strong>Skills:</strong>HTML,CSS,JS,Jango,Numpy,pandas,matplotlib,MySQL....</li>
+                <li><strong>Skills:</strong>HTML,CSS,JS,Python,Django,Numpy,pandas,matplotlib,MySQL....</li>
             </ul>
             <div class="info">
-                <img  src="{% static 'images/linkedin.png'  %}" alt="">
-                <img src="{% static 'images/twitter.png' %}" alt="">
-                <img src="{% static 'images/instagram.png' %}" alt="">
-                <img src="{% static 'images/facebook.png' %}" alt="">
+                <a href="https://www.linkedin.com/in/yashchaudhary27401/"><img src="{% static 'images/linkedin.png'  %}" alt=""></a>
+                <a href=""><img src="{% static 'images/twitter.png' %}" alt=""></a>
+                <a href="https://www.instagram.com/chaudhary_27401?igsh=MTdzeWc3dHd4N2VpMw=="><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a>
             </div>
         </div>
         <div class="images">
@@ -168,9 +141,9 @@ Team @ LearnWithUs
         </div>
     </div>
 
-    <div class="course">
+    <div class="member">
         <div class="images">
-            <img  src="{% static 'team/akash1.png' %}" alt="">
+            <img  src="{% static 'team/me.png' %}" alt="">
             <h1>Akash Chaurasiya</h1>
         </div>
         <div class="textdata">
@@ -178,13 +151,13 @@ Team @ LearnWithUs
             <ul>
                 <li><strong>Education:</strong>Pursuing B.Tech from HBTU Kanpur (2022-2026)</li>
                 <br>
-                <li><strong>Skills:</strong>HTML,CSS,JS,Numpy,pandas,matplotlib,MySQL....</li>
+                <li><strong>Skills:</strong>Python,C,HTML,CSS,JS,Numpy,pandas,matplotlib,MySQL....</li>
             </ul>
             <div class="info">
-                <img src="{% static 'images/linkedin.png'  %}" alt="">
-                <img src="{% static 'images/twitter.png' %}" alt="">
-                <img src="{% static 'images/instagram.png' %}" alt="">
-                <img src="{% static 'images/facebook.png' %}" alt="">
+                <a href="https://www.linkedin.com/in/akash-chaurasiya-57b980263/"><img src="{% static 'images/linkedin.png'  %}" alt=""></a>
+                <a href=""><img src="{% static 'images/twitter.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a>
             </div>
         </div>
     </div>
