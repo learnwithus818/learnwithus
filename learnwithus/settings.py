@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-$dft(fj@wrz0c10^@0*b*#(n&ed^6y(+p@*_&mdqwcjl=$*xww
 DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
-
+ALLOWED_HOSTS = ['www.learnwithus.org.in','learnwithus.org.in','ec2-16-16-220-198.eu-north-1.compute.amazonaws.com','ip-172-31-5-103.eu-north-1.compute.internal','ec2amaz-iakr70o.eu-north-1.compute.internal','127.0.0.1','172.31.5.103','16.16.220.198']
 
 # Application definition
 
