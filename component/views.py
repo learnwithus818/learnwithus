@@ -289,6 +289,15 @@ def linux(request):
 def python(request):
     return render(request,'python-course.html')
 
+def C(request):
+    return render(request,'C.html')
+
+def HTML(request):
+    return render(request,'HTML.html')
+
+def css(request):
+    return render(request,'css.html')
+
 
 def book(request):
     return render(request,'book.html')

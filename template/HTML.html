@@ -1,0 +1,420 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+HTML-Course
+{% endblock %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/html.css' %}">
+{% endblock %}
+
+
+{% block heading %}
+Hypertext-Markup-Language
+{% endblock %}
+
+{% block content %}
+
+    <section id="Course Content">
+        <p>
+            <b>
+                1. <a href="#introduction-to-HTML">Chapter 1: Introduction to HTML</a> <br>
+                2. <a href="#html-elements-ans-tags">Chapter 2: HTML Element and Tags</a> <br>
+                3. <a href="#html-attributes">Chapter 3: HTML Attributes</a> <br>
+                4. <a href="#html-forms">Chapter 4: HTML Forms</a> <br>
+                5. <a href="#html-semantic-elements">Chapter 5:HTML Semantic Elements</a> <br>
+                6. <a href="#html-multimedia-elements">Chapter 6: HTML Multimedia Elements</a> <br>
+            </b>
+        </p>
+    </section>
+    <section id="introduction-to-HTML">
+        <h2>Chapter 1: Introduction to HTML</h2>
+        <p>The basic structure of an HTML document and the common HTML tags sets the foundation for creating web pages and web applications. Subsequent chapters will explore more advanced HTML elements, attributes, and techniques for building dynamic and interactive </p>
+        <h3>1.1 What is HTML?</h3>
+        <ul>
+            <li><strong>Definition:</strong> HTML, which stands for Hypertext Markup Language, is the standard markup
+                language used to create web pages and web applications.</li>
+            <li><strong>Purpose:</strong>HTML provides the structure and organization for content on the web, allowing
+                browsers to interpret and display text, images, multimedia, and other elements.</li>
+        </ul>
+        <h3>1.2 Basic Structure of an HTML Document</h3>
+        <h4>DOCTYPE Declaration:</h4>
+        <ul>
+            <li><strong></strong>Specifies the document type and version of HTML being used.
+                Ensures the browser renders the document correctly.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (106).png' %}" alt=""></div>
+            </ul>
+            <h4>html Element:</h4>
+            <ul>
+            <li><strong></strong>Root element that wraps all content on the page.
+                Contains the entire HTML document.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (107).png' %}" alt=""></div>
+        </ul>
+        
+            <h4>head Element:</h4>
+            <ul>
+            <li><strong></strong>Contains meta-information about the document, such as title, metadata, and links to external resources.
+                Not visible on the web page.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (108).png' %}" alt=""></div>
+        </ul>
+            <h4> body Element:</h4>
+            <ul>
+            <li><strong></strong>Contains the main content of the document, such as text, images, multimedia, and other elements.
+                Visible content displayed in the browser window.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (109).png' %}" alt=""></div>     
+        </ul>
+        <h3>1.3 Basic HTML Tags</h3>
+        <h4>Opening and Closing Tags:</h4>
+        <ul>
+            <li><strong></strong>HTML elements consist of opening and closing tags, surrounding the content they define.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (110).png' %}" alt=""></div>
+        </ul>
+        <h4>Void Elements:</h4>
+        <ul>
+            <li><strong></strong>Some elements do not have closing tags and are self-closing.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (111).png' %}" alt=""></div>
+        </ul>
+        <h4>Nested Elements:</h4>
+        <ul>
+            <li><strong></strong>Elements can be nested inside each other to create a hierarchical structure.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (112).png' %}" alt=""></div>
+        </ul>
+        <h3>1.4 HTML Comments</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Comments in HTML are used to add notes or reminders to the code without affecting the output.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (113).png' %}" alt=""></div>
+        </ul>
+    </section>
+    
+    <section id="html-elements-ans-tags">
+    <h2>Chapter 2: HTML Elements and Tags</h2>
+    <p>The anatomy of HTML elements and knowing how to use common HTML tags is essential for creating well-structured and semantically meaningful web content. These foundational elements lay the groundwork for more advanced HTML concepts covered in subsequent chapters.</p>
+    <h3>2.1 Anatomy of an HTML Element</h3>
+    <h4>Opening Tag:</h4>
+    <ul>
+        <li><strong></strong>Marks the beginning of an HTML element.</li>
+        <li><strong></strong>Contains the name of the element.</li>
+        <li><strong></strong>May include attributes that provide additional information about the element.</li>
+    </ul>
+    <h4>Content:</h4>
+    <ul>
+        <li><strong></strong>The actual content or nested elements inside the element.</li>
+        <li><strong></strong>Can include text, other elements, or a combination of both.</li>
+    </ul>
+    <h4>Closing Tag:</h4>
+    <ul>
+        <li><strong></strong>Marks the end of an HTML element.</li>
+        <li><strong></strong>Contains a forward slash before the element name.</li>
+    </ul>
+    <h3>2.2 Common HTML Elements</h3>
+    <h4>Paragraph</h4>
+    <ul>
+        <li><strong></strong>Defines a paragraph of text.</li>
+        <li><strong></strong>Used for grouping text content together.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (114).png' %}" alt=""></div>
+    </ul>
+    <h4>h1 to h6 (Headings):</h4>
+    <ul>
+        <li><strong></strong>Defines headings of varying levels from h1 (highest importance) to h6 (lowest importance).</li>
+        <li><strong></strong>Used to structure and organize content hierarchically.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (115).png' %}" alt=""></div>
+    </ul>
+    <h4> a (Anchor):</h4>
+        <ul>
+            <li><strong></strong>Creates a hyperlink to another web page, file, or location within the same page.</li>
+            <li><strong></strong>Defined by the href attribute specifying the URL.</li>
+            <li><strong></strong>Example:</li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (116).png' %}" alt=""></div>
+        </ul>
+    <h4>img (Image):</h4>
+    <ul>
+        <li><strong></strong>Embeds an image into the HTML document.</li>
+        <li><strong></strong>Requires the src attribute specifying the image URL and the alt attribute providing alternative text.</li>
+        <li><strong></strong>Example:</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (117).png' %}" alt=""></div>
+    </ul>
+    <h4>ul and ol (Lists):</h4>
+    <ul>
+        <li><strong></strong>ul creates an unordered list, typically represented as bulleted items.</li>
+        <li><strong></strong>ol creates an ordered list, typically represented as numbered items.</li>
+        <li><strong></strong>List items are defined using the li element.</li>
+        <li><strong></strong>Example:</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (118).png' %}" alt=""></div>
+    </ul>
+</section>
+
+<section id="html-attributes">
+    <h2>Chapter 3: HTML Attributes</h2>
+    <p>HTML attributes and their usage is crucial for creating dynamic and interactive web pages. Attributes provide additional functionality and accessibility enhancements, improving the user experience and optimizing content for search engines. Subsequent chapters may explore more advanced HTML concepts and techniques.</p>
+    <h3>3.1 What are HTML Attributes?</h3>
+    <ul>
+        <li><strong>Definition:</strong> Attributes provide additional information about HTML elements. They are specified within the opening tag of an element and are written as name-value pairs.</li>
+        <li><strong>Purpose:</strong>Attributes enhance the functionality, behavior, or appearance of HTML elements and provide metadata about the content.</li>
+    </ul>
+    <h3>3.2 Common HTML Attributes</h3>
+    <h4>id:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Uniquely identifies an element within the document.</li>
+        <li><strong>Usage:</strong> Used for targeting elements with CSS or JavaScript.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (119).png' %}" alt=""></div>
+    </ul>
+    <h4>class:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Assigns one or more classes to an element for styling and JavaScript purposes.</li>
+        <li><strong>Usage:</strong>Used to apply CSS styles or JavaScript functionality to multiple elements with the same class.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (120).png' %}" alt=""></div>
+    </ul>
+    <h4>src:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Specifies the URL of an external resource, such as an image, audio file, or script.</li>
+        <li><strong>Usage:</strong>Used with elements like img, script,audio,video, etc.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (121).png' %}" alt=""></div>
+    </ul>
+    <h4>href:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Specifies the URL of the linked resource for anchor (a) elements.</li>
+        <li><strong>Usage:</strong> Defines the destination of a hyperlink.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (122).png' %}" alt=""></div>
+    </ul>
+    <h4>alt:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Provides alternative text for images, which is displayed if the image cannot be loaded or by screen readers for accessibility.</li>
+        <li><strong>Usage:</strong> Improves accessibility and search engine optimization (SEO).</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (123).png' %}" alt=""></div>
+    </ul>
+    <h4>title:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Provides additional information about the element, typically displayed as a tooltip when the user hovers over the element.</li>
+        <li><strong>Usage:</strong> Offers supplementary information for users.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (124).png' %}" alt=""></div>
+    </ul>
+    <h3>3.3 Boolean Attributes</h3>
+    <ul>
+        <li><strong>Definition:</strong> Boolean attributes are attributes without values. If present, their value is considered true; otherwise, they are considered false.</li>
+        <li><strong>Usage:</strong> Used for attributes where the presence alone signifies a certain condition.</li>
+        <li><strong>Examples:</strong></li>
+        <li><strong>checked:</strong> Indicates that a checkbox or radio button should be pre-selected.</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (125).png' %}" alt=""></div>
+        <li><strong>disabled:</strong> Disables an input element, preventing user interaction.</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (126).png' %}" alt=""></div>
+        <li><strong>readonly:</strong> Specifies that an input field is read-only and cannot be edited by the user.</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (127).png' %}" alt=""></div>
+    </ul>
+</section>
+
+<section id="html-forms">
+    <h2>Chapter 4: HTML Forms</h2>
+    <p>HTML forms is essential for building interactive web applications that collect user input and facilitate data submission. Proper use of form elements and attributes ensures a smooth and intuitive user experience, while server-side processing handles data securely and efficiently. Subsequent chapters may delve into more advanced form handling techniques and client-side validation</p>
+    <h3>4.1 What are HTML Forms?</h3>
+    <ul>
+        <li><strong>Definition:</strong> HTML forms are interactive elements used to collect user input and submit it to a server for processing. They allow users to enter data, make selections, and interact with web applications.</li>
+    </ul>
+    <h3>4.2 Basic Structure of an HTML Form</h3>
+    <h4>form Element:</h4>
+    <ul>
+        <li><strong></strong>Encloses all form elements and defines the form itself.
+            Contains attributes like action (specifying where to send the form data) and method (specifying the HTTP method for sending form data).</li>
+    </ul>
+    <h4>input Element:</h4>
+    <ul>
+        <li><strong></strong>Represents various types of input fields, such as text fields, checkboxes, radio buttons, etc.</li>
+        <li><strong></strong>Requires a type attribute to specify the type of input field.</li>
+        <li><strong></strong>Common types include text, password, checkbox, radio, submit, button, etc.</li>
+    </ul>
+    <h4>select and option Elements:</h4>
+    <ul>
+        <li><strong>select</strong> creates a dropdown list of options.</li>
+        <li><strong>option</strong> defines individual options within the dropdown list.</li>
+        <li><strong></strong>Allows users to select one or more options from a predefined list.</li>
+    </ul>
+    <h4>textarea Element:</h4>
+    <ul>
+        <li><strong></strong>Provides a multi-line text input field.</li>
+        <li><strong></strong>Suitable for longer textual input, such as comments or messages.</li>
+    </ul>
+    <h4>button Element:</h4>
+    <ul>
+        <li><strong></strong>Creates a clickable button within the form.</li>
+        <li><strong></strong>Can be used to submit the form, reset form fields, or trigger custom JavaScript functions.</li>
+    </ul>
+    <h3>4.3 Common Form Attributes</h3>
+    <h4>name:</h4>
+    <ul>
+        <li><strong></strong>Assigns a name to the form control, which is used to reference the input data when the form is submitted.</li>
+        <li><strong></strong>Allows server-side processing of form data.</li>
+    </ul>
+    <h4>value:</h4>
+    <ul>
+        <li><strong></strong>Specifies the initial value of the form control.</li>
+        <li><strong></strong>For checkboxes and radio buttons, it indicates the value submitted if the control is checked/selected.</li>
+    </ul>
+    <h4>placeholder:</h4>
+    <ul>
+        <li><strong></strong>Provides a hint or example text within an input field, indicating the expected format or content.</li>
+    </ul>
+    <h4>required:</h4>
+    <ul>
+        <li><strong></strong>Specifies that the input field must be filled out before submitting the form.</li>
+        <li><strong></strong>Provides client-side validation to ensure required fields are not left empty.</li>
+
+    </ul>
+    <h4>disabled:</h4>
+    <ul>
+        <li><strong></strong>Disables the form control, preventing user interaction.</li>
+        <li><strong></strong>Useful for fields that should not be editable or interactable based on certain conditions.</li>
+    </ul>
+    <h3>4.4 Form Submission</h3>
+    <h4>Submission Methods:</h4>
+    <ul>
+        <li><strong></strong>Forms can be submitted using the GET or POST methods.</li>
+        <li><strong>GET:</strong>Sends form data as part of the URL query string. Suitable for small amounts of data and idempotent operations.</li>
+        <li><strong>POST:</strong> Sends form data in the request body. Suitable for larger data sets and sensitive information.</li>
+    </ul>
+    <h4>action Attribute:</h4>
+    <ul>
+        <li><strong></strong>Specifies the URL or endpoint where the form data should be submitted.</li>
+        <li><strong></strong>Determines the server-side script or program responsible for processing the form data.</li>
+    </ul>
+    <h4>Form Controls and Data Submission:</h4>
+    <ul>
+        <li><strong></strong>When a form is submitted, the data entered by the user in form controls (input fields, checkboxes, etc.) is packaged and sent to the server for processing.</li>
+        <li><strong></strong>Server-side scripts or programs receive the form data and can perform actions based on the submitted data, such as storing it in a database, sending emails, etc.</li>
+    </ul>
+</section>
+
+<section id="html-semantic-elements">
+    <h2>Chapter 5: HTML Semantic Elements</h2>
+    <p>Semantic elements provide clarity and structure to HTML documents, making them more accessible to both users and search engines. By using appropriate semantic tags, developers can improve the organization and readability of their code, leading to better user experiences and improved SEO rankings. Subsequent chapters may explore additional HTML5 features and best practices for web development.</p>
+    <h3>5.1 What are Semantic Elements?</h3>
+    <ul>
+        <li><strong>Definition:</strong> Semantic elements in HTML are tags that provide meaning to the content they enclose, making it more understandable to both humans and machines.</li>
+        <li><strong>Purpose:</strong>Semantic elements improve the structure, accessibility, and search engine optimization (SEO) of web pages by clearly defining the purpose and role of different parts of the content.</li>
+    </ul>
+    <h3>5.2 Common Semantic Elements</h3>
+    <h4>header:</h4>
+    <ul>
+        <li><strong>Purpose:</strong>Represents introductory content typically found at the beginning of a page or section.</li>
+        <li><strong>Usage:</strong>Often contains navigation links, headings, logos, or other introductory elements.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (128).png' %}" alt=""></div>
+    </ul>
+    <h4>footer:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Represents a footer for a section, article, or the entire page.</li>
+        <li><strong>Usage:</strong> Contains information such as copyright notices, contact details, or links to related content.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (129).png' %}" alt=""></div>
+        
+    </ul>
+    <h4>nav:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Defines a section containing navigation links.</li>
+        <li><strong>Usage:</strong>Used to group links that navigate to different pages or sections within the website.
+            </li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (130).png' %}" alt=""></div>
+        
+    </ul>
+    <h4>article:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Represents an independent, self-contained piece of content.</li>
+        <li><strong>Usage:</strong> Typically used for blog posts, news articles, forum posts, or similar content that can be distributed and reused independently.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (131).png' %}" alt=""></div>
+        
+    </ul>
+    <h4>section:</h4>
+    <ul>
+        <li><strong>Purpose:</strong> Represents a thematic grouping of content within a document or page.</li>
+        <li><strong>Usage:</strong> Used to group related content together, such as chapters, topics, or sections of a webpage.</li>
+        <li><strong></strong>Example:</li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (132).png' %}" alt=""></div>
+        
+    </ul>
+    <h4>main:</h4>
+    <ul>
+        <li><strong>Purpose: </strong>Specifies the main content of the document.</li>
+        <li><strong>Usage:</strong>Used to identify the primary content area of the page, excluding headers, footers, and sidebars.</li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/html-img/Screenshot (133).png' %}" alt=""></div>
+        
+    </ul>
+    </section>
+
+    <section id="html-multimedia-elements">
+        <h2>Chapter 6: HTML5 Multimedia Elements</h2>
+        <p>HTML5 multimedia elements allow developers to seamlessly integrate images, videos, and audio into web pages, enriching the user experience with dynamic and engaging content. By providing alternative text and fallback content, developers ensure accessibility and graceful degradation for users with different browsing environments. Subsequent chapters may explore advanced multimedia techniques and optimizations for web content.</p>
+        <h3>6.1 Embedding Images and Videos</h3>
+        <h4>(Image):</h4>
+        <ul>
+            <li><strong>Purpose:</strong>Embeds an image into the HTML document.</li>
+            <li><strong>Attributes:</strong></li>
+            <li><strong>src:</strong> Specifies the URL of the image.</li>
+            <li><strong>alt:</strong>Provides alternative text for the image, important for accessibility and SEO.</li>
+            <li><strong></strong>Other attributes include width, height, srcset, etc.</li>
+            <li><strong></strong>Example:</li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (134).png' %}" alt=""></div>  
+        </ul>
+        <h4>(Video):</h4>
+        <ul>
+            <li><strong>Purpose:</strong>Embeds video content into the HTML document.</li>
+            <li><strong>Attributes:</strong></li>
+            <li><strong>src:</strong>Specifies the URL of the video file.</li>
+            <li><strong>controls:</strong>Adds playback controls (play, pause, volume, etc.) to the video.</li>
+            <li><strong></strong>Other attributes include width, height, autoplay, loop, etc.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (135).png' %}" alt=""></div>
+        </ul>
+        <h4>(Audio):</h4>
+        <ul>
+            <li><strong>Purpose:</strong>Embeds audio content into the HTML document.</li>
+            <li><strong></strong>Attributes:</li>
+            <li><strong>src:</strong>Specifies the URL of the audio file.</li>
+            <li><strong>controls:</strong>Adds playback controls (play, pause, volume, etc.) to the audio.</li>
+            <li><strong></strong>Other attributes include autoplay, loop, preload, etc.</li>
+            <li><strong></strong>Example:</li>
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (136).png' %}" alt=""></div>
+        </ul>
+        <h3>6.2 Providing Alternate Content</h3>
+        <h4>figure and figcaption:</h4>
+        <ul>
+            <li><strong>Purpose:</strong>Provides a semantic way to group images, videos, or other multimedia content with captions.</li>
+            <li><strong>Usage:</strong>figure contains the multimedia content, while figcaption provides the caption.</li>
+            <li><strong>Example:</strong></li>
+            
+            <div class="images"><img src="{% static 'images/html-img/Screenshot (137).png' %}" alt=""></div>
+            
+        </ul>
+        <h4>Fallback Content for Unsupported Media:</h4>
+        <ul>
+            <li><strong></strong>It's important to provide fallback content for multimedia elements that may not be supported by all browsers.</li>
+            <li><strong></strong>The content within the opening and closing tags of multimedia elements serves as fallback content, displayed if the browser cannot render the media.</li>
+        </ul>
+        
+
+
+
+     
+    </section>
+
+
+    {% endblock %}

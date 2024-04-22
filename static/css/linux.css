@@ -1,11 +1,16 @@
 
 html{
     color:rgb(255, 255, 255);
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("{% static 'images/bg.jpg' %}");
     
     
 }
-
+.content{
+    background-color: black;
+    border-radius: 0.2rem;
+    
+}
 .back{
     color: rgb(255, 255, 255);
     background-color: rgb(99, 99, 99);

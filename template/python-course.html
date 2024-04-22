@@ -1,27 +1,22 @@
+
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7794178181441181"
-        crossorigin="anonymous"></script>
-    <link rel="icon" href="{% static 'images/python-image/python-logo.png' %}">
-    <title>Python Course</title>
-    <link rel="stylesheet" href="{% static 'css/pythoncourse.css' %}">
-</head>
-
-<body>
+{% block title %}
+Python Course
+{% endblock %}
 
 
-    <div class="header">
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/pythoncourse.css' %}">
+{% endblock %}
 
-        <h1>Mastering Python Programming: A Comprehensive Guide </h1>
-        <img src="{% static 'images/python-image/python-logo.png' %}" alt="">
 
-    </div>
+{% block heading %}
+Mastering Python Programming: A Comprehensive Guide
+{% endblock %}
+
+{% block content %}
     <br><br>
     <div class="css">
 
@@ -1154,14 +1149,4 @@
 
 
 
-
-
-
-
-
-
-
-
-</body>
-
-</html>
+    {% endblock %}

@@ -24,6 +24,8 @@ urlpatterns = [
     path("cse",views.cse,name='cse'),
     path("notespedia",views.notespedia,name='notespedia'),
     path("team",views.team, name= "team"),
-    path("terms_and_conditions",views.terms_and_conditions, name= "terms_and_conditions")
-
+    path("terms_and_conditions",views.terms_and_conditions, name= "terms_and_conditions"),
+    path('C',views.C,name = 'C'),
+    path('HTML',views.HTML,name = 'HTML'),
+    path('css',views.css,name = 'css')
 ]
