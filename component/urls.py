@@ -22,6 +22,7 @@ urlpatterns = [
     path('logout',views.logout,name = 'logout'),
     path("profile_page", views.profile_page, name="profile_page"),
     path("cse",views.cse,name='cse'),
+    path("et",views.et,name='et'),
     path("notespedia",views.notespedia,name='notespedia'),
     path("team",views.team, name= "team"),
     path("terms_and_conditions",views.terms_and_conditions, name= "terms_and_conditions")

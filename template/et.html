@@ -1,0 +1,354 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Electronic Engineering
+{% endblock %}
+
+{% block heading %}
+Electronic Engineering Notes
+{% endblock %}
+
+
+{% block style %}
+
+<style>
+    header,footer {
+        background-color: rgba(8, 24, 39, 0.207) !important;
+    }
+    footer{
+        margin-top: 2rem !important;
+        box-shadow: 2px 2px 5px white !important;
+    }
+
+    .navbar{
+        margin-top: 1rem !important;
+        box-shadow: 1px 1px 5px white !important;
+        /* border: .1px solid white !important; */
+    }
+
+    .navbar div{
+        background-color: rgba(255, 255, 255, 0.914) !important;
+        color: rgb(22,33,62) !important;
+    }
+
+    
+    html {
+        /* background-image: url("static/etimages/bg1.webp"); */
+        /* background-image: url("static/etimages/hero-bg.jpg"); */
+        background-image: url("static/etimages/contact-bg.jpg");
+        background-position: center;
+        background-repeat: repeat-y;
+        /* background-repeat: repeat; */
+        color: white !important;
+    }
+
+    .firstyear::-webkit-scrollbar,
+    html::-webkit-scrollbar {
+        display: none;
+    }
+
+    .yearheading {
+        margin-top: 2rem;
+        margin-left: 3vw;
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        border-bottom: 3px solid rgb(255, 255, 255);
+        width: fit-content;
+        padding-bottom: .5rem;
+        padding-right: 1rem;
+        font-family: "Protest Riot";
+        font-weight: 400;
+        /* background-color: rgb(22, 33, 62);
+        padding: .5rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        border-radius: 1rem; */
+    }
+
+    .firstyear {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 1rem;
+        box-shadow: 2px 2px 7px rgb(255, 255, 255);
+        display: flex;
+        column-gap: 3rem;
+        overflow-x: scroll;
+        padding: 1.5rem;
+        margin: 1rem;
+        margin-left: 3vw;
+    }
+
+    .firstyear img {
+        border-radius: 1.75rem;
+        width: 20vw;
+        /* margin-right: 1rem; */
+        /* border-radius: 1rem; */
+        box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    }
+
+    .firstyear img:hover {
+        scale: 1.03;
+        /* width: 21vw; */
+        /* height: 18.5vw; */
+        box-shadow: 3px 3px 10px rgb(255, 255, 255);
+
+    }
+
+    .navbar {
+        box-shadow: 2px 2px 10px white;
+    }
+
+    @media (max-width:650px) {
+        .firstyear img {
+            height: 25vw;
+        }
+    }
+
+</style>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<!-- First Year Notes -->
+<h2 class="yearheading">First Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/c.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/chem.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/ee.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/et.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/graphics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/m2.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/Mathematics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/mechanics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/pc.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et1st/Physics.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'firstyearimg/workshop.png' %}" alt="">
+        </a>
+    </div>
+
+
+</div>
+
+
+
+<!-- Second Year Notes -->
+<h2 class="yearheading">Second Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Analog Circuits.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Computer Oriented Numerical.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Cyber Security.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Data Structure Using C.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Digital Electronics (ET).png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Digital Electronics (CS & IT).png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Electrical Circuit Analysis.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Electromagnetic Field Theory.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Engineering EnM.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Hardware Description Language.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Indian Constitution.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Mathematics-III.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Organizational Behaviour.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Signal and Systems.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Solid State Devices (ET).png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et2nd/Solid State Devices & Circuits (EE).png' %}" alt="">
+        </a>
+    </div>
+
+
+
+</div>
+
+
+
+
+<!-- Third Year Notes -->
+<h2 class="yearheading">Third Year Notes</h2>
+<div class="firstyear">
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Advanced Instrumentation.png' %}" alt="">
+        </a>
+
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Analog Communication.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Analog Integrated Circuits.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Antenna and Wave Propagation.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Control System.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Digital Communication.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Machine Learning.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Microprocessors.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/OEC.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Operation Research.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/Optical Communication.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/VLSI Design.png' %}" alt="">
+        </a>
+    </div>
+    <div>
+        <a href="">
+            <img src="{% static 'etimages/et3rd/VLSI Technology.png' %}" alt="">
+        </a>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
