@@ -1,0 +1,480 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+CSS Notes
+{% endblock %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/CSS.css' %}">
+{% endblock %}
+
+
+{% block heading %}
+CSS Notes
+{% endblock %}
+
+{% block content %}
+
+
+    <section id="course-content">
+        <h2>Course Content</h2>
+        <p>
+            <b>
+                1. <a href="#introduction-to-css">Chapter 1: Introduction to CSS</a> <br>
+                2. <a href="#css-selectors">Chapter 2: CSS Selectors</a> <br>
+                3. <a href="#css-box-model">Chapter 3: CSS Box Model</a> <br>
+                4. <a href="#css-layout">Chapter 4: CSS Layout</a> <br>
+                5. <a href="#css-typography">Chapter 5: CSS Typography</a> <br>
+                6. <a href="#css-transitions-and-animations">Chapter 6: CSS Transitions and Animations</a> <br>
+
+            </b>
+        </p>
+    </section>
+    <section id="introduction-to-css">
+        <h2>Chapter 1: Introduction to CSS</h2>
+        <p>
+            Understanding the basics of CSS and how to apply styles using different methods sets the foundation for
+            creating visually appealing and well-structured web pages. Subsequent chapters will delve deeper into
+            various CSS concepts, selectors, and layout techniques.
+        </p>
+        <h3>1.1 What is CSS?</h3>
+        <h4>Definition:</h4>
+        <ul>
+            <li><strong></strong>CSS, which stands for Cascading Style Sheets, is a style sheet language used for
+                describing the presentation of a document written in HTML or XML.</li>
+        </ul>
+        <h4>Purpose:</h4>
+        <ul>
+            <li><strong>Separation of Concerns:</strong>CSS allows for the separation of document structure (HTML) from
+                its presentation, enhancing maintainability and scalability.</li>
+            <li><strong>Consistency: </strong>Provides a consistent look and feel across multiple pages or an entire
+                website.</li>
+            <li><strong>Reuse:</strong>Styles can be applied to multiple elements, ensuring a unified design.</li>
+        </ul>
+        <h4>Cascading Nature:</h4>
+        <ul>
+            <li><strong>Cascade:</strong>Refers to the order of importance when multiple styles conflict. Styles can
+                come from different sources like user styles, author styles, and browser defaults.</li>
+            <li><strong>Inheritance:</strong>Styles applied to parent elements are inherited by their children, creating
+                a hierarchical styling structure.</li>
+        </ul>
+        <h3>1.2 How to Include CSS</h3>
+        <h4>Inline Styles:</h4>
+        <ul>
+            <li><strong>Usage:</strong>Applied directly to an HTML element using the style attribute.</li>
+        </ul>
+        <h4>Internal Styles:</h4>
+        <ul>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/css-img/Screenshot (73).png' %}" alt="">
+        </ul></div>
+        <h4>External Styles:</h4>
+        <ul>
+            <li><strong>Usage:</strong>External styles are stored in a separate CSS file and linked to the HTML document
+                using the link tag.</li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/css-img/Screenshot (74).png' %}" alt=""></div>
+            <div class="images"><img src="{% static 'images/css-img/Screenshot (75).png' %}" alt=""></div>
+        </ul>
+        <h4>Selector Priority:</h4>
+        <ul>
+            <li><strong>Inline > Internal > External:</strong>Inline styles take precedence over internal styles, and
+                internal styles take precedence over external styles.</li>
+        </ul>
+        <h4>Multiple Styles:</h4>
+        <ul>
+            <li><strong>Styles can be combined:</strong>You can use a combination of inline, internal, and external
+                styles to achieve the desired presentation.</li>
+        </ul>
+        </section>
+
+        <section id="css-selectors">
+            <h2>Chapter 2: CSS Selectors</h2>
+            <p>
+                Understanding CSS selectors is crucial for precisely targeting and styling HTML elements. The
+                combination of these selectors provides flexibility and control over the styling of various parts of a
+                webpage. Subsequent chapters will explore the CSS box model, layout, typography, and other advanced
+                styling concepts.
+            </p>
+            <h3>2.1 Simple Selectors</h3>
+            <h4>Element Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>Selects elements based on their tag name.</li>
+                <li><strong>Example:</strong>p { color: blue; } selects all 'p' tag elements and sets their text color
+                    to blue.</li>
+            </ul>
+            <h4>Class Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>Selects elements with a specific class attribute.</li>
+                <li><strong>Example:</strong>.highlight { background-color: yellow;}selects all elements with
+                    class="highlight" and sets their background color to yellow.</li>
+            </ul>
+            <h4>ID Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>Selects a single element with a specific ID attribute.</li>
+                <li><strong>Example: </strong>#header { font-size: 24px; } selects the element with id="header" and sets
+                    its font size to 24 pixels.</li>
+            </ul>
+            <h3>2.2 Combinators</h3>
+            <h4>Descendant Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>A B selects all B elements that are descendants of A.</li>
+                <li><strong></strong>Example: article p { margin: 10px; } selects all 'p' tag elements that are
+                    descendants of an 'article' tag and sets their margin to 10 pixels.</li>
+            </ul>
+            <h4>Child Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>A > B selects all B elements that are a direct child of A.</li>
+                <li><strong>Example:</strong>ul > li { list-style-type: square; } selects all 'li' tag elements that are
+                    direct children of a 'ul' tag and sets their list style to square.</li>
+            </ul>
+            <h4>Adjacent Sibling Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>A + B selects B that is immediately preceded by A.</li>
+                <li><strong>Example:</strong>h2 + p { font-style: italic; } selects all 'p' tag elements that directly
+                    follow an 'h2' tag and sets their font style to italic.</li>
+            </ul>
+            <h4>General Sibling Selector:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>A ~ B selects all B elements that are siblings of A and share the same
+                    parent.</li>
+                <li><strong>Example:</strong>h3 ~ p { color: gray; } selects all 'p' tag elements that are siblings of
+                    an 'h3' tag and sets their text color to gray.</li>
+            </ul>
+            <h3>2.3 Attribute Selectors</h3>
+            <h4>Selecting by Attribute Presence:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>element[attribute] selects elements with a specified attribute, regardless
+                    of its value.</li>
+                <li><strong>Example:</strong>input[type] { border: 1px solid black; } selects all 'input' tag elements
+                    with a type attribute and sets a black border.</li>
+            </ul>
+            <h4>Selecting by Attribute Value:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>element[attribute=value] selects elements with a specified attribute and
+                    value.</li>
+                <li><strong>Example:</strong>a[href="https://example.com"] { color: purple; } selects all 'a' tag
+                    elements with an href attribute equal to "https://example.com" and sets their text color to purple.
+                </li>
+            </ul>
+            <h4>Selecting by Attribute Value Prefix/Suffix:</h4>
+            <ul>
+                <li><strong>Syntax:</strong>element[attribute^=value] selects elements with an attribute value that
+                    starts with the specified value.</li>
+                <li><strong>Example:</strong>img[src^="/images/"] { border: 2px solid gray; } selects all 'img' tag
+                    elements with an src attribute starting with "/images/" and sets a gray border.</li>
+            </ul>
+        </section>
+        <section id="css-box-model">
+            <h2>Chapter 3: CSS Box Model</h2>
+            <h3>3.1 Box Model Basics</h3>
+            <h4>Definition:</h4>
+            <ul>
+                <li><strong></strong>The CSS box model is a fundamental concept that describes the layout of elements on
+                    a webpage as rectangular boxes. Each box comprises content, padding, border, and margin.</li>
+            </ul>
+            <h4>Components of the Box Model:</h4>
+            <ul>
+                <li><strong>Content Area:</strong>The innermost part of the box that holds the actual content, such as
+                    text, images, or other elements. <br>
+                    Defined by the content width and content height.
+                </li>
+                <li><strong>Padding:</strong>The space between the content and the border. <br>
+                    Adds internal spacing inside the box.
+                    Controlled by padding property.</li>
+                <li><strong>Border:</strong>A border surrounding the padding.
+                    Adds a visible boundary to the box.
+                    Controlled by border property.</li>
+                <li><strong>Margin:</strong>The space outside the border, creating separation between adjacent
+                    boxes.Controls the spacing between boxes.
+                    Controlled by margin property.</li>
+            </ul>
+            <h4>Visualization of the Box Model:</h4>
+            <ul>
+                <li><strong>Image Description:</strong>The content area is surrounded by padding, followed by the
+                    border, and then the margin. <br> The combined width and height of these components determine the
+                    total space occupied by the box.</li>
+            </ul>
+            <h3>3.2 Box Sizing</h3>
+            <h4>Box Sizing Property:</h4>
+            <ul>
+                <li><strong></strong>Defines how the total width and height of an element are calculated. <br>
+                    Two common values: content-box and border-box.
+                </li>
+            </ul>
+            <h4>content-box:</h4>
+            <ul>
+                <li><strong></strong>Default value. <br>
+                    Width and height represent only the content area, excluding padding and border. <br>
+                    Calculation: width = content width, height = content height.</li>
+            </ul>
+            <h4>border-box:</h4>
+            <ul>
+                <li><strong></strong>Width and height include content, padding, and border. <br>
+                    Useful for easier control of box dimensions. <br>
+                    Calculation: width = content width + padding + border, height = content height + padding + border.
+                </li>
+                <li><strong>Example:</strong></li>
+                <div class="images"><img src="{% static 'images/css-img/Screenshot (76).png' %}" alt=""></div>
+            </ul>
+            <h3>3.3 Display Property</h3>
+            <h4>Display Property:</h4>
+            <ul>
+                <li><strong></strong>Determines the type of box an element generates. <br>
+                    Common values: block, inline, inline-block, none.</li> <br>
+                <li><strong>block:</strong>Generates a block-level box, taking up the full width available and starting
+                    on a new line.</li> <br>
+                <li><strong>inline:</strong>Generates an inline box, only as wide as necessary, and does not start on a
+                    new line.</li> <br>
+                <li><strong>inline-block:</strong>Generates a hybrid box that behaves like an inline element but can
+                    have block-level properties.</li>
+                <li><strong></strong></li> <br>
+                <li><strong>none:</strong>Hides the element, making it invisible and not taking up any space.</li> <br>
+                <li><strong>Example:</strong></li>
+                <div class="images"><img src="{% static 'images/css-img/Screenshot (77).png' %}" alt=""></div>
+            </ul>
+            </section>
+
+            <section id="css-layout">
+                <h2>Chapter 4: CSS Layout</h2>
+                <h3>4.1 Positioning</h3>
+                <h4>Position Property:</h4>
+                <ul>
+                    <li><strong></strong>Determines the type of positioning used for an element.</li> <br>
+                    <li><strong></strong>Common values: static, relative, absolute, fixed.</li>
+                </ul>
+                <h4>static:</h4>
+                <ul>
+                    <li><strong></strong>Default value.</li> <br>
+                    <li><strong></strong>Elements are positioned according to the normal document flow.</li>
+                </ul>
+                <h4>relative:</h4>
+                <ul>
+                    <li><strong></strong>Positioned relative to its normal position.</li> <br>
+                    <li><strong></strong>Allows for adjustments using top, right, bottom, and left properties.</li>
+                </ul>
+                <h4>absolute:</h4>
+                <ul>
+                    <li><strong></strong>Positioned relative to the nearest positioned ancestor.</li> <br>
+                    <li><strong></strong>If none, positioned relative to the initial containing block (viewport).</li>
+                </ul>
+                <h4>fixed:</h4>
+                <ul>
+                    <li><strong></strong>Positioned relative to the viewport.</li> <br>
+                    <li><strong></strong>Does not move when the page is scrolled.</li> <br>
+                    <li><strong></strong>Example:</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (78).png' %}" alt=""></div>
+                </ul>
+                <h3>4.2 Flexbox</h3>
+                <h4>Flexbox Container Properties:</h4>
+                <ul>
+                    <li><strong>display: flex;:</strong> Defines a flex container.</li>
+                    <li><strong>flex-direction:</strong>Defines the main axis direction (row, column).</li>
+                    <li><strong>justify-content:</strong>Aligns items along the main axis.</li>
+                    <li><strong>align-items:</strong>Aligns items along the cross axis.</li>
+                    <li><strong>align-content:</strong>Aligns flex lines when there is extra space in the container.
+                    </li>
+                </ul>
+                <h4>Flexbox Item Properties:</h4>
+                <ul>
+                    <li><strong>order:</strong>Specifies the order of the item within the flex container.</li>
+                    <li><strong>flex-grow:</strong>Specifies the ability for a flex item to grow.</li>
+                    <li><strong>flex-shrink:</strong>Specifies the ability for a flex item to shrink.</li>
+                    <li><strong>flex-basis:</strong>Specifies the initial size of a flex item.</li>
+                    <li><strong>flex:</strong>Shorthand for flex-grow, flex-shrink, and flex-basis.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (79).png' %}" alt=""></div>
+                </ul>
+                <h3>4.3 Grid</h3>
+                <h4>Grid Container Properties:</h4>
+                <ul>
+                    <li><strong>display: grid;:</strong>Defines a grid container.</li>
+                    <li><strong>grid-template-rows and grid-template-columns:</strong>Defines the size of rows and
+                        columns.</li>
+                    <li><strong>grid-gap:</strong>Sets the gap between rows and columns.</li>
+
+                </ul>
+                <h4>Grid Item Properties:</h4>
+                <ul>
+                    <li><strong>grid-row and grid-column:</strong>Determines the placement of an item within the grid.
+                    </li>
+                    <li><strong>grid-area:</strong>Shorthand for grid-row, grid-column, grid-row-span, and
+                        grid-column-span.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (80).png' %}" alt=""></div>
+                </ul>
+            </section>
+
+            <section id="css-typography">
+                <h2>Chapter 5: CSS Typography</h2>
+                <h3>5.1 Font Properties</h3>
+                <h4>font-family:</h4>
+                <ul>
+                    <li><strong></strong>Specifies the font family for an element.</li>
+                    <li><strong></strong>Can include multiple font names as a fallback.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (81).png' %}" alt=""></div>
+                </ul>
+                <h4>font-size:</h4>
+                <ul>
+                    <li><strong></strong>Sets the size of the font.</li>
+                    <li><strong></strong>Common units include px, em, rem.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (82).png' %}" alt=""></div>
+                </ul>
+                <h4>font-weight:</h4>
+                <ul>
+                    <li><strong></strong>Defines the thickness of the font characters.</li>
+                    <li><strong></strong>Values include normal, bold, bolder, lighter, or numeric values.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (83).png' %}" alt=""></div>
+                </ul>
+                <h4>font-style:</h4>
+                <ul>
+                    <li><strong></strong>Specifies the style of the font.</li>
+                    <li><strong></strong>Values include normal, italic, or oblique.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (84).png' %}" alt=""></div>
+                </ul>
+                <h3>5.2 Text Properties</h3>
+                <h4>color:</h4>
+                <ul>
+                    <li><strong></strong>Sets the color of the text.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (85).png' %}" alt=""></div>
+                </ul>
+                <h4>text-align:</h4>
+                <ul>
+                    <li><strong></strong>Aligns the text within its containing element.</li>
+                    <li><strong></strong>Values: left, center, right, justify.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (86).png' %}" alt=""></div>
+                </ul>
+                <h4>line-height:</h4>
+                <ul>
+                    <li><strong></strong>Controls the height of each line of text.</li>
+                    <li><strong></strong>Can be a unitless number, percentage, or length value.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (87).png' %}" alt=""></div>
+                </ul>
+                <h4>text-decoration:</h4>
+                <ul>
+                    <li><strong></strong>Adds decoration to text, such as underlining.</li>
+                    <li><strong></strong>Values include none, underline, overline, line-through.</li>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (88).png' %}" alt=""></div>
+
+                </ul>
+                <h3>5.3 Other Typography Considerations</h3>
+                <h4>Web Fonts:</h4>
+                <ul>
+                    <li><strong>Import and use custom fonts from external sources like Google Fonts or Adobe
+                            Fonts.</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (89).png' %}" alt=""></div>
+                </ul>
+                <h4>Fallback Fonts:</h4>
+                <ul>
+                    <li><strong></strong>Provide fallback font options in case the preferred font is not available.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (90).png' %}" alt=""></div>
+                </ul>
+                <h4>Responsive Typography:</h4>
+                <ul>
+                    <li><strong></strong>Use relative units like em, rem, or percentages for font sizes to ensure
+                        responsiveness.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (91).png' %}" alt=""></div>
+                </ul>
+
+            </section>
+
+            <section id="css-transitions-and-animations">
+                <h2>Chapter 6: CSS Transitions and Animations</h2>
+                <h3>6.1 CSS Transitions</h3>
+                <h4>Transitions Overview:</h4>
+                <ul>
+                    <li><strong></strong>Transitions provide a smooth change of property values over a specified
+                        duration.</li>
+                    <li><strong></strong>Commonly used properties: transition-property, transition-duration,
+                        transition-timing-function, transition-delay.</li>
+
+                </ul>
+                <h4>transition-property:</h4>
+                <ul>
+                    <li><strong></strong>Specifies the CSS property to which the transition should be applied.</li>
+                    <li><strong></strong>Multiple properties can be transitioned simultaneously.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (92).png' %}" alt=""></div>
+                </ul>
+                <h4>transition-duration:</h4>
+                <ul>
+                    <li><strong>Sets the duration of the transition in seconds (s) or milliseconds (ms).</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (93).png' %}" alt=""></div>
+                </ul>
+                <h4>transition-timing-function:</h4>
+                <ul>
+                    <li><strong>Defines the speed curve of the transition.</strong></li>
+                    <li><strong>Values include ease (default), linear, ease-in, ease-out, ease-in-out, and custom
+                            cubic-bezier functions.
+                        </strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (94).png' %}" alt=""></div>
+                </ul>
+                <h4>transition-delay:</h4>
+                <ul>
+                    <li><strong>Adds a delay before the transition starts.</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (95).png' %}" alt=""></div>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (96).png' %}" alt=""></div>
+                </ul>
+                <h3>6.2 CSS Animations</h3>
+                <h4>Animations Overview:</h4>
+                <ul>
+                    <li><strong></strong>Animations provide more control over the timing and sequencing of changes in
+                        CSS properties.</li>
+                    <li><strong></strong>Key components: @keyframes rule, animation-name, animation-duration,
+                        animation-timing-function, animation-delay, animation-iteration-count, animation-direction.</li>
+                </ul>
+                <h4>@keyframes Rule:</h4>
+                <ul>
+                    <li><strong></strong>Defines the animation behavior at different stages (keyframes) during the
+                        animation.
+                    </li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (97).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-name:</h4>
+                <ul>
+                    <li><strong></strong>Specifies the name of the @keyframes rule to be applied.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (98).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-duration:</h4>
+                <ul>
+                    <li><strong></strong>Sets the duration of the animation.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (99).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-timing-function:</h4>
+                <ul>
+                    <li><strong></strong>Defines the timing function for the animation.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (100).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-delay:</h4>
+                <ul>
+                    <li><strong></strong>Adds a delay before the animation starts.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (101).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-iteration-count:</h4>
+                <ul>
+                    <li><strong></strong>Sets the number of times the animation should repeat.</li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (102).png' %}" alt=""></div>
+                </ul>
+                <h4>animation-direction:</h4>
+                <ul>
+                    <li><strong></strong>Specifies whether the animation should play in reverse or alternate directions.
+                    </li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (103).png' %}" alt=""></div>
+                    <li><strong>Example:</strong></li>
+                    <div class="images"><img src="{% static 'images/css-img/Screenshot (104).png' %}" alt=""></div>
+                </ul>
+            </section>
+            
+
+            {% endblock %}

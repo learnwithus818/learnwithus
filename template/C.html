@@ -1,0 +1,398 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+C Course
+{% endblock %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/c.css' %}">
+{% endblock %}
+
+
+{% block heading %}
+C Course
+{% endblock %}
+
+{% block content %}
+
+
+    <section id="course-content">
+        <h2>Course Content:</h2>
+        <p>
+            <b>
+                1. <a href="#introduction-to-c">Introduction to C</a> <br>
+                2. <a href="#variables-and-data-types">Variables and Data Types</a> <br>
+                3. <a href="#control-structures">Control Structures</a> <br>
+                4. <a href="#functions">Functions</a> <br>
+                5. <a href="#arrays-and-pointers">Arrays and Pointers</a> <br>
+            </b>
+        </p>
+    </section>
+
+    <section id="introduction-to-c">
+        <h2>Introduction to C</h2>
+        <p> C is a general-purpose programming language that was developed in the early 1970s at Bell Labs by Dennis Ritchie. It was designed to provide low-level access to memory and to support structured programming. Over the years, C has become one of the most widely used programming languages, influencing the development of many other languages.</p>
+        <ul>
+            <li><strong>Procedural Language:</strong> C follows a procedural programming paradigm.</li>
+            <li><strong>Low-Level Access:</strong> C provides direct access to memory addresses.</li>
+            <li><strong>Portability:</strong> C is designed to be platform-independent.</li>
+            <li><strong>Efficient and Fast:</strong> C is known for its efficiency and speed.</li>
+            <li><strong>Rich Standard Library:</strong> C comes with a standard library.</li>
+            <li><strong>Community and Legacy:</strong> C has a large and active community.</li>
+            <li><strong>Influence on Other Languages:</strong> C has influenced the development of many other programming languages.</li>
+        </ul>
+        
+    </section>
+    <section>
+        <h3>Hello World Program in C:</h3>
+        <p>Let's start with a simple "Hello, World!" program. Open a text editor or an integrated development environment
+            (IDE), type the following code, and save it as Hello.c:
+        </p>
+        <p>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot.png' %}" alt=""></div>
+        </p>
+    </section>
+    <section id="variables-and-data-types">
+        <h2>Variables and Data Types</h2>
+        <h3>Variables in C</h3>
+        <p>In the C programming language, a variable is a named storage location that holds a value. 
+        <h4>Rules for Naming Variables</h4>
+        <ul>
+            <li><strong>Must begin with a letter or underscore (_).</strong></li>
+            <li><strong>Can contain letters, numbers, and underscores.</strong></li>
+            <li><strong>Case-sensitive.</strong></li>
+            <li><strong>Avoid using reserved keywords.</strong></li>
+            
+        </ul>
+        <h4>Variable Declaration and Initialization</h4>
+        <p>Variables are declared with a data type, followed by the variable name. Initialization can be done at the time of declaration:</p>
+        <p><div class="images"><img src="{% static 'images/c-images/Screenshot2.png' %}" alt=""></div></p>
+        <h3>Constant in C</h3>
+        <p>Constants are fixed values that do not change during the program's execution. They are declared using the const keyword:</p>
+        <p><div class="images"><img src="{% static 'images/c-images/Screenshot 3.png' %}" alt=""></div></p>
+    </section>
+    <section>
+        <h2>Data Types in C</h2>
+        <p> Every variable in C must have a data type, which determines the type of value it can store. Understanding variables and data types is fundamental to writing effective C programs.</p>
+        <p>
+            C supports various data types, categorized as:
+        </p>
+        <ul>
+            <li><strong>Basic Data Types:</strong> int, float, double, char</li>
+            <li><strong>Derived Data Types:</strong> arrays, pointers, structures, unions</li>
+            <li><strong>Enumeration Data Type:</strong> enum</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Basic Data Types</h2>
+        <ul>
+        <li>
+            <strong>int:</strong> Integer data type, used for whole numbers. <br>
+            Example: int age = 25;
+        </li>
+        <li>
+            <strong>float:</strong> Floating-point data type, used for decimal numbers with single precision. <br>
+            Example: float price = 24.99;
+        </li>
+        <li>
+            <strong>double:</strong> Double-precision floating-point data type, used for decimal numbers with higher precision. <br>
+            Example: double pi = 3.14159265359;
+        </li>
+        <li>
+            <strong>char:</strong> Character data type, used for individual characters. <br>
+            Example: char grade = 'A';
+        </li>
+    </ul>
+    </section>
+    <section>
+        <h2>Derived Data Types:</h2>
+        <h4>1.Arrays</h4>
+        <ul>
+        <li><strong>A collection of elements of the same data type arranged in a contiguous memory block.</strong></li>
+        <li><strong>Elements are accessed using an index.</strong></li>
+        <li><strong>Example: int numbers[5] = {1, 2, 3, 4, 5};</strong></li>
+    </ul>
+        <h4>2.Pointers</h4>
+        <ul>
+        <li><strong>Variables that store memory addresses.</strong></li>
+        <li><strong>Used for dynamic memory allocation and manipulation.</strong></li>
+        <li><strong>Example: int *ptr = &age;</strong></li>
+    </ul>
+        <h4>3.Structures</h4>
+        <ul>
+        <li><strong>Allows bundling different types of data under a single name.</strong></li>
+        <li><strong>Each member in a structure can have a different data type.</strong></li>
+        <li><strong>Example: Let's take the example of a structure named Person and see how we can declare instances of this structure and access its members:</strong></li>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot4.png' %}" alt=""></div> <br>
+    </ul>
+     <br>
+
+        <h4>4.Unions</h4>
+        <ul>
+        <li><strong>Similar to structures but share the same memory space for all members.</strong></li>
+        <li><strong>Only one member can hold a value at a time.</strong></li>
+        <li><strong>Example:</strong></li>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (30).png' %}" alt=""></div>
+    </ul>
+        <br>
+    </section>
+    <section>
+        <h2>Enumeration Data Type:</h2>
+        <h4>enum (Enumeration):</h4>
+        <ul>
+            <li><strong>Used to define named constant values that represent integer values.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (31).png' %}" alt=""></div>
+        </ul>
+    </section>
+    <section>
+        <h3>sizeof Operator:</h3>
+        <p>The sizeof operator in C is used to determine the size, in bytes, of a data type or a variable. For example:</p>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (4).png' %}" alt=""></div>
+    </section>
+    <section>
+        <h3>Type Casting:</h3>
+        <p>Type casting allows converting a value from one data type to another. For example:</p>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (32).png' %}" alt=""></div>
+        <p>Here, the (float) casts the integer 5 to a floating-point value before division.</p>
+    </section>
+    <section id="control-structures">
+        <h2>Control Structures</h2>
+        <p>Control structures are constructs that control the flow of execution in a program. They allow you to make decisions, repeat actions, and create a logical structure for your code. <br>
+            Control structures provide the building blocks for creating logic and flow in C programs. They enable you to make decisions, repeat actions, and control the execution of your code based on specific conditions. Mastering control structures is essential for writing effective and flexible programs in C.</p>
+        <h4>1.if Statement:</h4>
+        <ul>
+            <li><strong>The if statement is used to make decisions in your program based on a condition.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (33).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (34).png' %}" alt=""></div>
+        </ul>
+        <h4>2.else-if Statement:</h4>
+        <ul>
+            <li><strong>Used to test multiple conditions.</strong></li>
+            <li><strong>Syntax:
+            </strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (35).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (36).png' %}" alt=""></div>
+        </ul>
+        <h4>3.Nested if-else Statement</h4>
+        <p>A nested if-else statement is an if-else statement that is embedded inside another if or else block. This allows for more complex decision-making logic by evaluating multiple conditions in a hierarchical manner.</p>
+        <ul>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (37).png' %}" alt=""></div> <br> 
+            <li><strong>Example:</strong></li>
+            <p>Let's consider a scenario where we want to classify a student's performance based on their marks in two subjects: Math and English.</p>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (38).png' %}" alt=""></div>
+        </ul>
+        <h4>4.Switch Case Statement</h4>
+        <ul>
+            <li><strong>Used to select one choice from many based on the value of an expression.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (39).png' %}" alt=""></div> <br>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (38).png' %}" alt=""></div>
+        </ul> <br>
+        <h4>5.While Loop:</h4>
+        <ul>
+            <li><strong>Used to execute a block of code repeatedly as long as a condition is true.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (41).png' %}" alt=""></div>
+            <li><strong>Exmple:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (42).png' %}" alt=""></div>
+        </ul> <br>
+        <h4>6.for Loop:</h4>
+        <ul>
+            <li><strong>Similar to the while loop but provides a more concise syntax for iterating over a range of values.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (43).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (44).png' %}" alt=""></div>
+        </ul> <br>
+        <h4>7.do-while Loop:</h4>
+        <ul>
+            <li><strong>Similar to the while loop, but the condition is checked after the block of code is executed, ensuring the code runs at least once.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (45).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (46).png' %}" alt=""></div>
+        </ul>
+    </section>
+    <section id="functions">
+        <h2>Functions</h2>
+        <p>Functions play a crucial role in organizing and structuring C programs. They enhance code reusability, readability, and maintainability by encapsulating logic into modular units. Understanding how to declare, define, and use functions is essential for effective C programming.</p>
+        <h3> Introduction to Functions:</h3>
+        <ul>
+            <li><strong>A function is a self-contained block of code that performs a specific task or set of tasks.</strong></li>
+            <li><strong>Functions help in modularizing code, making it more readable, reusable, and maintainable.</strong></li>
+            <li><strong>C programs typically have a main function as the starting point of execution.</strong></li>
+        </ul> <br>
+        <h3>Function Declaration and Definition:</h3>
+        <h4>Declaration:</h4> <br>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (47).png' %}" alt=""></div>
+        <h4>Definition:</h4>
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (48).png' %}" alt=""></div>
+        <li><strong>Example:</strong></li> 
+        <div class="images"><img src="{% static 'images/c-images/Screenshot (49).png' %}" alt=""></div> <br>
+        <h3>Function Call:</h3>
+        <ul>
+            <li><strong>A function is called by using its name followed by parentheses containing the actual arguments (values) passed to the parameters.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (50).png' %}" alt=""></div>
+        </ul>
+        <h3>Function Parameters:</h3>
+        <ul>
+            <li><strong>Parameters are variables declared in the function header and used to pass values into the function.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (51).png' %}" alt=""></div>
+        </ul>
+        <h3>Return Type:</h3>
+        <ul>
+            <li><strong>The return type indicates the type of data that the function will return to the calling code.</strong></li>
+            <li><strong>If a function does not return any value, the return type is void.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (52).png' %}" alt=""></div>
+        </ul>
+        <h3>Function Prototypes:</h3>
+        <ul>
+            <li><strong>A function prototype declares the function's signature (return type, name, and parameters) before its actual definition.</strong></li>
+            <li><strong>It allows the compiler to recognize the function before it is called.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (53).png' %}" alt=""></div>
+        </ul>
+        <h3>Function Overloading:</h3>
+        <ul>
+            <li><strong>C does not support function overloading, which means you cannot have multiple functions with the same name but different parameter lists.
+            </strong></li>
+            <li><strong>Each function must have a unique name.</strong></li>
+        </ul>
+        <h3>Recursive Functions:</h3>
+        <ul>
+            <li><strong>A function is said to be recursive if it calls itself during its execution.</strong></li>
+            <li><strong>Recursive functions are useful for solving problems that can be broken down into smaller, similar sub-problems.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (54).png' %}" alt=""></div>
+        </ul>
+        <h3>Scope of Variables:</h3>
+        <ul>
+            <li><strong>Variables declared inside a function have local scope, meaning they are only accessible within that function.</strong></li>
+            <li><strong>Parameters and local variables are created when the function is called and destroyed when the function exits.</strong></li>
+        </ul>
+        <h3>Return Statement:</h3>
+        <ul>
+            <li><strong>The return statement is used to exit a function and return a value to the calling code.</strong></li>
+            <li><strong>It is optional in functions with a void return type.
+            </strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (55).png' %}" alt=""></div>
+        </ul>
+        <h3>Passing Arrays to Functions:</h3>
+        <ul>
+            <li><strong>Arrays can be passed to functions using pointers or by specifying the array size in the function parameters.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (56).png' %}" alt=""></div>
+        </ul>
+        
+    </section>
+
+    <section id="arrays-and-pointers">
+        <h2>Arrays and Pointers</h2>
+        <p>Arrays and pointers are closely related concepts in C, with pointers providing a powerful mechanism for manipulating arrays and dynamic memory. Understanding how to declare, initialize, and use arrays, as well as working with pointers, is essential for effective memory management and data manipulation in C programming.</p>
+        <br>
+        <h3>Arrays in C:</h3>
+        <h4>1. Introduction to Arrays:</h4>
+        <ul>
+            <li><strong>An array is a collection of elements of the same data type stored in contiguous memory locations.</strong></li>
+            <li><strong>Arrays provide a way to efficiently organize and access a fixed-size sequence of values.</strong></li>
+        </ul>
+        <h4>2. Declaration and Initialization:</h4>
+        <ul>
+          <li><strong>Syntax:</strong></li>
+          <div class="images"><img src="{% static 'images/c-images/Screenshot (57).png' %}" alt=""></div>
+          <li><strong>Example:</strong></li>
+          <div class="images"><img src="{% static 'images/c-images/Screenshot (58).png' %}" alt=""></div>
+          <li><strong>Initialization:</strong></li>
+          <div class="images"><img src="{% static 'images/c-images/Screenshot (59).png' %}" alt=""></div>
+        </ul>
+        <h4>3. Accessing Array Elements:</h4>
+        <ul>
+            <li><strong>Array elements are accessed using an index, starting from 0.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (61).png' %}" alt=""></div>
+        </ul>
+        <h4>4. Multidimensional Arrays:</h4>
+        <ul>
+            <li><strong>Arrays can have more than one dimension, creating matrices or tables.</strong></li>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (62).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (63).png' %}" alt=""></div>
+        </ul>
+        <h4>5. String Arrays:</h4>
+        <ul>
+            <li><strong>Strings in C are represented as character arrays.</strong></li>
+            <li><strong>Strings are terminated by a null character '\0'.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (64).png' %}" alt=""></div>
+        </ul>
+        <h4>6. Pointer Arithmetic with Arrays:</h4>
+        <ul>
+            <li><strong>The name of an array is a constant pointer to the first element of the array.</strong></li>
+            <li><strong>Pointer arithmetic can be used to traverse through array elements.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (65).png' %}" alt=""></div>
+            
+        </ul>
+        <h3>Pointers in C:</h3>
+        <h4>1. Introduction to Pointers:</h4>
+        <ul>
+            <li><strong>A pointer is a variable that stores the memory address of another variable.</strong></li>
+            <li><strong>Pointers allow dynamic memory allocation and manipulation.</strong></li>
+              
+        </ul>
+        <h4>2. Declaration and Initialization of Pointers:</h4>
+        <ul>
+            <li><strong>Syntax:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (66).png' %}" alt=""></div>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (67).png' %}" alt=""></div>
+        </ul>
+        <h4>3. Assigning Addresses to Pointers:</h4>
+        <ul>
+            <li><strong>Pointers are assigned the memory address of variables using the address-of operator & .</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (68).png' %}" alt=""></div>
+        </ul>
+        <h4>4. Accessing Values through Pointers:</h4>
+        <ul>
+            <li><strong>The value at the memory address pointed to by a pointer is accessed using the dereference operator *.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (69).png' %}" alt=""></div>
+        </ul>
+        <h4>5. Pointer Arithmetic:</h4>
+        <ul>
+            <li><strong>Pointer arithmetic allows manipulation of pointer values based on the data type they point to.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (70).png' %}" alt=""></div>
+        </ul>
+        <h4>6. Dynamic Memory Allocation:</h4>
+        <ul>
+            <li><strong>The malloc() function is used to allocate memory dynamically.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (71).png' %}" alt=""></div>
+        </ul>
+        <h4>7. Freeing Dynamically Allocated Memory:</h4>
+        <ul>
+            <li><strong>The free() function is used to release dynamically allocated memory.</strong></li>
+            <li><strong>Example:</strong></li>
+            <div class="images"><img src="{% static 'images/c-images/Screenshot (72).png' %}" alt=""></div>
+        </ul>
+
+        
+    </section>
+
+    {% endblock %}
