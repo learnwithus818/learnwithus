@@ -409,6 +409,11 @@ def cse(request):
     return render(request,'cse.html')
 
 
+
+def et(request):
+    return render(request,'et.html')
+
+
 def loginerror(request):
     return render(request,'loginerror.html')
 
