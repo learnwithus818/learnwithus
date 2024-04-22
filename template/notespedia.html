@@ -1,57 +1,86 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {%load static%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NotesPedia</title>
-    <link rel="stylesheet" href="../static/css/notespedia.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="header">
-        <img src="../static/images/logo3.png" alt="" >
-        <h1 class="heading">LearnWithUs</h1>
 
-    </div>
-    <div class="nav">
-        <ul class="nav_list">
-            <li1 class="navv_list_items"><a href="home">Home</a></li1>
-            <li2 class="navv_list_items"><a href="opportunities">Opportunities</a></li2>
-            <li3 class="navv_list_items"><a href="$">Books</a></li3>
-            <li4 class="navv_list_items"><a href="notespedia">NotesPedia</a></li4>
-            <li5 class="navv_list_items"><a href="techblog">Techblogs</a></li5>
-        </ul>
-    </div>
+
+{% block style %}
+
+    <style>
+        .notes_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr !important;
+            /* justify-content: center; */
+            /* border: 2px solid; */
+            color: rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+        }
+
+        .notes_container img {
+            height: 13rem !important;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'css/notespedia.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Notes @ LearnWithUs
+{% endblock %}
+
+{% block heading %}
+Notes @ LearnWithUs
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
     <h1 class="explore_heading">Explore Your Academics Notes :</h1>
     <!-- this is for underline below the text and used inline css  -->
     <div class="horizontal_line_1"></div>
-    <div class="horizontal_line_2" ></div>
+    <div class="horizontal_line_2"></div>
 
     <!-- from here codes is below explore courses line -->
     <div class="main_container">
         <div class="left_container">
             <section class="search">
                 <input type="search" name="search_bar" class="search_box" placeholder="Search Here....">
-                <button class="search_button"><img src="../static/notespedia_images/icons8-search-50.png" alt="">Search</button>
+                <button class="search_button"><img src="../static/notespedia_images/icons8-search-50.png"
+                        alt="">Search</button>
             </section>
             <section class="opportunities_for_freshsers">
                 <h3 class="opportunities_for_freshers_heading">
                     See Available Option For Freshers :</h3>
-                    <div class="opportunities_container">
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.0}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.1}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.2}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.3}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.4}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.5}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.6}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.7}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.8}}</a></ul>
-                        <ul class="opportunities_items"><a href="#" style="text-decoration: none; color:black">{{opportunities_for_fresher.9}}</a></ul>
-                    </div>
+                <div class="opportunities_container">
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.0}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.1}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.2}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.3}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.4}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.5}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.6}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.7}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.8}}</a></ul>
+                    <ul class="opportunities_items"><a href="#"
+                            style="text-decoration: none; color:black">{{opportunities_for_fresher.9}}</a></ul>
+                </div>
 
             </section>
             <section class="reference_books">
@@ -81,9 +110,10 @@
             </section>
             <section class="notes_container">
                 <ul class="notes_items">
-                   <a href="#" class="notes_items_logo">
-                    <img src="{%static 'images/computer_science_and_engineering.png'%}" alt="" class="notes_items_logo">
-                   </a>
+                    <a href="cse" class="notes_items_logo">
+                        <img src="{%static 'images/computer_science_and_engineering.png'%}" alt=""
+                            class="notes_items_logo">
+                    </a>
                 </ul>
                 <ul class="notes_items">
                     <a href="#" class="notes_items_logo">
@@ -116,10 +146,13 @@
                 <ul class="notes_items"></ul>
 
             </section>
-            <a href="#" class="show_more_branches_a"><p class="show_more_branches">
-                View All Branches
-            </p></a>
+            <a href="#" class="show_more_branches_a">
+                <p class="show_more_branches">
+                    View All Branches
+                </p>
+            </a>
         </div>
     </div>
-</body>
-</html>
+
+
+{% endblock %}

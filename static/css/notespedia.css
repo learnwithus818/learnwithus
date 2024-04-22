@@ -194,16 +194,8 @@
     box-shadow:  2px 2px rgba(0, 0, 0, 0.1);
 
 }
-.notes_container{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    border: 2px solid;
-    color: rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
 
-}
+
 
 .notes_items_logo{
     width: 100%;
@@ -313,3 +305,6 @@
     }
 
 }
+
+
+
