@@ -17,11 +17,11 @@ import psycopg2
 
 
 db_config = {
-    'user': 'fx818',
-    'password': '@Anurag818@',
-    'host': 'learnwithus.postgres.database.azure.com',
+    'user': 'learnwithusdb',
+    'password': 'learnwithus818',
+    'host': 'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
     'port': 5432,
-    'database': 'postgres'
+    'database': 'learnwithusdb'
 }
 
 connection = psycopg2.connect(**db_config)
