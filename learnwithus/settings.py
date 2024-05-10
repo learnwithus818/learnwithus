@@ -107,14 +107,30 @@ WSGI_APPLICATION = "learnwithus.wsgi.application"
 #     }
 # }
 
+# Azure database
 
+# DATABASES = {
+#     'default':{
+#         "ENGINE":"django.db.backends.postgresql",
+#         "NAME":'postgres',
+#         "USER":'fx818',
+#         'PASSWORD':'@Anurag818@',
+#         'HOST':'learnwithus.postgres.database.azure.com',
+#         'PORT':'5432'
+
+#     }
+# }
+
+
+
+# AWS Databases
 DATABASES = {
     'default':{
         "ENGINE":"django.db.backends.postgresql",
-        "NAME":'postgres',
-        "USER":'fx818',
-        'PASSWORD':'@Anurag818@',
-        'HOST':'learnwithus.postgres.database.azure.com',
+        "NAME":'learnwithusdb',
+        "USER":'learnwithusdb',
+        'PASSWORD':'learnwithus818',
+        'HOST':'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
         'PORT':'5432'
 
     }
