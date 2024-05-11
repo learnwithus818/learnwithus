@@ -132,7 +132,6 @@ DATABASES = {
         'PASSWORD':'learnwithus818',
         'HOST':'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
         'PORT':'5432'
-
     }
 }
 
