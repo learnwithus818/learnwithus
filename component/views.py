@@ -433,6 +433,10 @@ def terms_and_conditions(request):
     return render(request, 'terms_and_conditions.html')
 
 
+def soon(request):
+    return render(request, 'soon.html')
+
+
 # connection = psycopg2.connect(**db_config)
 # cursor = connection.cursor()
 # query = "select rank from \"profile\";"

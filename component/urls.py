@@ -28,5 +28,6 @@ urlpatterns = [
     path("terms_and_conditions",views.terms_and_conditions, name= "terms_and_conditions"),
     path('C',views.C,name = 'C'),
     path('HTML',views.HTML,name = 'HTML'),
-    path('css',views.css,name = 'css')
+    path('css',views.css,name = 'css'),
+    path('soon',views.soon,name = 'soon')
 ]
