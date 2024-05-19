@@ -124,16 +124,33 @@ WSGI_APPLICATION = "learnwithus.wsgi.application"
 
 
 # AWS Databases
+# DATABASES = {
+#     'default':{
+#         "ENGINE":"django.db.backends.postgresql",
+#         "NAME":'learnwithusdb',
+#         "USER":'learnwithusdb',
+#         'PASSWORD':'learnwithus818',
+#         'HOST':'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
+#         'PORT':'5432'
+#     }
+# }
+
+
+# Using Supabase
 DATABASES = {
     'default':{
         "ENGINE":"django.db.backends.postgresql",
-        "NAME":'learnwithusdb',
-        "USER":'learnwithusdb',
-        'PASSWORD':'learnwithus818',
-        'HOST':'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
+        "NAME":'postgres',
+        "USER":'postgres.mvaonazvlarpgxcrjpsp',
+        'PASSWORD':'@learnwithus818@',
+        'HOST':'aws-0-ap-south-1.pooler.supabase.com',
         'PORT':'5432'
     }
 }
+
+
+
+
 
 
 

@@ -17,11 +17,11 @@ import psycopg2
 
 
 db_config = {
-    'user': 'learnwithusdb',
-    'password': 'learnwithus818',
-    'host': 'learnwithusdb.c1eaw826wdev.eu-north-1.rds.amazonaws.com',
+    'user': 'postgres.mvaonazvlarpgxcrjpsp',
+    'password': '@learnwithus818@',
+    'host': 'aws-0-ap-south-1.pooler.supabase.com',
     'port': 5432,
-    'database': 'learnwithusdb'
+    'database': 'postgres'
 }
 
 connection = psycopg2.connect(**db_config)
@@ -166,8 +166,10 @@ def techblog(request):
     id_query = "select id from \"blogs\";"
     cursor.execute(id_query)
     id = cursor.fetchall()
-    nid = id[-1][0]
-
+    try:
+        nid = id[-1][0]
+    except:
+        nid=1
     cursor.execute(sql_query)
 
 
@@ -216,12 +218,17 @@ def techblog(request):
         cursor.execute(sql_query)
         rows = cursor.fetchall()
         result = rows[::-1]
+        sql_query = "SELECT link FROM \"blogs\";"
+        cursor.execute(sql_query)
+        links = cursor.fetchall()
+        link_data = links[::-1]
 
         content = 'nill'
 
         value = {
                 'data':result,
-                'username':universal_username
+                'username':universal_username,
+                'link':link_data
         }
 
         return render(request,'techblog.html',value)
